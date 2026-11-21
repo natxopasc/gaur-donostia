@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gaur">
+<meta name="theme-color" content="#14110f">
+<title>Gaur Donostia — qué hacer hoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14110f; --card:#1f1a17; --line:#2f2824; --ink:#f4ede4; --mute:#a89a8c;
+    --accent:#ff6a3d; --accent2:#ffd166; --free:#7bd389;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.45;
+       padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:560px;margin:0 auto;padding:18px 16px 60px}
+  header{padding:8px 0 18px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  h1{font-family:Fraunces,serif;font-weight:800;font-size:44px;line-height:1;margin:6px 0 4px;letter-spacing:-.02em}
+  h1 span{color:var(--accent)}
+  .date{color:var(--mute);font-size:14px}
+  h2{font-family:Fraunces,serif;font-weight:600;font-size:22px;margin:26px 0 12px}
+  .picks{display:flex;flex-direction:column;gap:12px}
+  .pick{background:linear-gradient(135deg,#2a1d16,#1f1a17);border:1px solid #3a2a20;border-radius:16px;padding:16px}
+  .pick .num{font-family:Fraunces,serif;font-size:28px;color:var(--accent);line-height:1;float:left;margin-right:12px}
+  .pick h3{font-size:17px;font-weight:600}
+  .pick .meta{color:var(--accent2);font-size:13px;margin:2px 0 8px}
+  .pick p{color:#d9cfc4;font-size:14px;clear:both}
+  .filters{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;margin:0 -16px;padding-left:16px;
+           display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
+  .filters::-webkit-scrollbar{display:none}
+  .chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+        padding:7px 13px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#1a0f0a}
+  .slot{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:18px 0 8px}
+  .ev{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+  .ev .t{font-family:Fraunces,serif;font-weight:600;font-size:18px;color:var(--accent2)}
+  .ev .n{font-weight:600;font-size:15px}
+  .ev .p{color:var(--mute);font-size:13px;margin-top:2px}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;background:#2c2420;color:#d9cfc4;margin-right:6px}
+  .tag.free{background:#1d3324;color:var(--free)}
+  .tag.last{background:#3a1d14;color:var(--accent)}
+  .empty{color:var(--mute);padding:20px 0}
+  footer{color:var(--mute);font-size:12px;margin-top:30px;line-height:1.6}
+  footer a{color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Donostia · agenda del día</div>
+    <h1>Gaur<span>.</span></h1>
+    <div class="date">__DATE__</div>
+  </header>
+
+  <h2 id="picks-title">Mi selección de hoy</h2>
+  <div class="picks" id="picks"></div>
+
+  <h2>Todo lo de hoy</h2>
+  <div class="filters" id="filters"></div>
+  <div id="list"></div>
+
+  <footer>
+    Datos: <a href="https://www.kulturklik.euskadi.eus">Kulturklik</a> (Open Data Euskadi), actualizado __UPDATED__ · __COUNT__ eventos. Confirma horarios y entradas en la web de cada sala.
+  </footer>
+</div>
+
+<script>
+const EVENTS = __EVENTS__;
+
+const PICKS = __PICKS__;
+
+const CATS = ["Todo", ...[...new Set(EVENTS.map(e => e.c))], "Gratis"];
+let current = "Todo";
+try { current = localStorage.getItem("gaur-cat") || "Todo"; } catch(e){}
+
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const isFree = e => /gratis/i.test(e.p);
+
+function renderPicks(){
+  if(!PICKS.length){ document.getElementById('picks-title').style.display='none'; return; }
+  document.getElementById("picks").innerHTML = PICKS.map((p,i)=>`
+    <div class="pick"><div class="num">${i+1}</div>
+      <h3>${esc(p.n)}</h3><div class="meta">${esc(p.m)}</div><p>${esc(p.d)}</p></div>`).join("");
+}
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML = CATS.map(c =>
+    `<button class="chip ${c===current?'on':''}" data-c="${c}">${c}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+    current = b.dataset.c;
+    try { localStorage.setItem("gaur-cat", current); } catch(e){}
+    renderFilters(); renderList();
+  });
+}
+
+function slotOf(e){
+  if(!e.t) return "Exposiciones y actividades de varios días";
+  const h = parseInt(e.t,10);
+  if(isNaN(h)) return "Sin hora";
+  if(h < 14) return "Mañana";
+  if(h < 19) return "Tarde";
+  return "Noche";
+}
+
+function renderList(){
+  const list = EVENTS.filter(e => current==="Todo" || (current==="Gratis" ? isFree(e) : e.c===current));
+  if(!list.length){ document.getElementById("list").innerHTML = '<div class="empty">Nada en esta categoría hoy.</div>'; return; }
+  let html = "", last = null;
+  for(const e of list){
+    const s = slotOf(e);
+    if(s !== last){ html += `<div class="slot">${s}</div>`; last = s; }
+    const tags = `<span class="tag">${e.c}</span>` + (isFree(e)?'<span class="tag free">gratis</span>':'') + (e.last?'<span class="tag last">último día</span>':'');
+    const inner = `<div class="t">${e.t || "—"}</div>
+      <div><div class="n">${esc(e.n)}</div>
+      <div class="p">${tags}${esc(e.l)}${e.p && !isFree(e) ? " · " + esc(e.p) : ""}</div></div>`;
+    html += e.u ? `<a class="ev" href="${e.u}" target="_blank" rel="noopener">${inner}</a>` : `<div class="ev">${inner}</div>`;
+  }
+  document.getElementById("list").innerHTML = html;
+}
+
+renderPicks(); renderFilters(); renderList();
+</script>
+</body>
+</html>
