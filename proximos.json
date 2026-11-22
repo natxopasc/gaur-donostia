@@ -11,7 +11,6 @@
    "zona": "Bizkaia",
    "precio": "32 €",
    "url": "https://sarrerak.bbk.eus/es/espectaculo/albert-pla-(sirimiri)/albertpla050227?_gl=1*1e4as8r*_ga*OTA4ODYxMjkwLjE3ODc2NTQ1MTY.*_ga_N43YD5E9BX*czE3OTQ5ODkwMDEkbzExJGcxJHQxNzk0OTg5MDE0JGo0NyRsMCRoMA..",
-   "porque": "Lo sigues en Spotify",
    "d": "Albert Pla en directo, dentro del ciclo Sirimiri de la Sala BBK."
   },
   {
@@ -23,8 +22,7 @@
    "zona": "Gipuzkoa",
    "precio": "25€ / 45€",
    "url": "https://shop.kursaal.eus/selection/event/date?productId=%2010229925830894%20&lang=es",
-   "porque": "Spotify lo pone entre los parecidos a Zahara",
-   "d": "El gallego Xoel López en el Kursaal. Si te gusta lo último que escuchas de Zahara, encaja."
+   "d": "El gallego Xoel López en el Kursaal, con el repertorio de su nuevo disco."
   },
   {
    "fecha": "2027-02-19",
@@ -35,7 +33,6 @@
    "zona": "Bizkaia",
    "precio": "30€",
    "url": "https://entradas.codetickets.com/entradas/vega/102685/santana27/online",
-   "porque": "Spotify la pone entre los parecidos a Zahara",
    "d": "La cantautora Vega abre en Bilbao la gira de su nuevo disco."
   },
   {
@@ -47,7 +44,6 @@
    "zona": "Gipuzkoa",
    "precio": "30 €",
    "url": "https://www.victoriaeugenia.eus/es/agenda-entradas/3-albert-pla?ide=44308",
-   "porque": "Lo sigues en Spotify",
    "d": "Segunda oportunidad de ver a Albert Pla, esta vez en Donostia y en el Victoria Eugenia."
   },
   {
@@ -59,9 +55,8 @@
    "zona": "Álava",
    "precio": "Bonos desde 125 €",
    "url": "https://www.laganzua.net/noticias/32740-azkena-rock-2027-patti-smith-bad-religion-marilyn-manson-slash-y-wilco-en-su-25-aniversario",
-   "d": "Patti Smith, una de tus más escuchadas, en el 25 aniversario del Azkena. Con Wilco, Bad Religion, Slash y Marilyn Manson en el cartel.",
-   "tag": "festival",
-   "porque": "Patti Smith está entre tus más escuchados"
+   "d": "Patti Smith en el 25 aniversario del Azkena, con Wilco, Bad Religion, Slash y Marilyn Manson en el cartel.",
+   "tag": "festival"
   },
   {
    "fecha": "2027-10-16",
@@ -72,8 +67,7 @@
    "zona": "Bizkaia",
    "precio": "30 / 33 €",
    "url": "https://www.entradas.com/event/miguel-campello-gira-flamencura-kafe-antzokia-21722082/",
-   "porque": "Lo sigues en Spotify",
-   "d": "Fuera del horizonte de seis meses, pero es de los tuyos: mejor saberlo con tiempo."
+   "d": "Queda lejos, pero conviene saberlo con tiempo."
   }
  ],
  "grandes": [

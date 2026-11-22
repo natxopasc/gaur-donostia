@@ -254,16 +254,15 @@ function renderProximos(v){
 
   const title = document.getElementById("picks-title");
   const pt = v.para_ti.filter(ok);
-  title.textContent = "Para ti";
+  title.textContent = "Sugerencias";
   title.style.display = pt.length ? "" : "none";
   document.getElementById("picks").innerHTML = pt.map(p => `
     <div class="pick">${starBtn(p)}<h3>${esc(p.titulo)}</h3>
       <div class="meta">${esc(cuando(p))} · ${esc(p.lugar)}${p.ciudad ? " (" + esc(p.ciudad) + ")" : ""}${p.precio ? " · " + esc(p.precio) : ""}</div>
-      ${p.porque ? `<div class="why">${esc(p.porque)}</div>` : ""}
       <p>${esc(p.d)}</p>
       ${p.url ? `<p><a href="${esc(p.url)}" target="_blank" rel="noopener" style="color:var(--accent)">Entradas e info →</a></p>` : ""}</div>`).join("");
 
-  document.getElementById("all-title").textContent = "Los grandes";
+  document.getElementById("all-title").textContent = "Conciertos seleccionados";
   document.getElementById("filters").style.display = "";
   document.getElementById("filters").innerHTML = zonas.map(c =>
     `<button class="chip ${c===current?'on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
