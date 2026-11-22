@@ -1,68 +1,20 @@
 {
  "hoy": [
-  {
-   "n": "Bertsolari Txapelketa: semifinal",
-   "m": "17:00 · Donostia Arena (Illunbe) · 22 €",
-   "d": "Una semifinal del Campeonato de Euskal Herria, la cita grande del bertsolarismo, que solo se celebra cada cuatro años. Si nunca has visto una plaza de toros entera en silencio pendiente de una rima, este es el día."
-  },
-  {
-   "n": "Catherine Russell",
-   "m": "19:00 · Kursaal · 50 €",
-   "d": "Una de las voces más elegantes del jazz y el blues clásico de Nueva York, en formato de concierto de sala grande. El plan caro del día, pero de los que no se repiten cada mes."
-  },
-  {
-   "n": "Literaktum: «Encender una hoguera»",
-   "m": "19:00 · Casares-Tomasene (Altza) · gratis",
-   "d": "Radio performance de Inko Martín a partir del cuento de supervivencia en la nieve de Jack London, dentro del festival literario Literaktum. Gratis y en directo: buena excusa para descubrir Tomasene."
-  },
-  {
-   "n": "Cine en Tabakalera: «Stray dogs»",
-   "m": "19:00 · Tabakalera · 4,50 €",
-   "d": "La programación de cine de Tabakalera suele ir por la vía de autor, lejos de la cartelera comercial. Por 4,50 € es el plan barato y con criterio para cerrar el sábado."
-  }
+  {"n": "Darius Jones Trio", "m": "19:00 · Teatro Victoria Eugenia · 20 €", "d": "El saxo alto de Darius Jones es de los más personales del jazz de vanguardia neoyorquino: lírico y crudo a la vez. En trío y en el Victoria Eugenia, sin red y muy de cerca."},
+  {"n": "Ballet de Kiev: El Corsario", "m": "18:30 · Kursaal · 35 / 51 €", "d": "Piratas, raptos y pas de deux de exhibición: ballet clásico de gran formato para quien busque espectáculo de domingo por la tarde. Ideal si llevas tiempo sin pisar el Kursaal."},
+  {"n": "Visita: Alejandro Cartagena, Ground Rules", "m": "17:30 (EU) + ES · Kutxa Fundazioa Artegunea · Gratis (reserva)", "d": "Visita comentada a la muestra del fotógrafo mexicano Alejandro Cartagena, que lleva años retratando cómo crecen y se ordenan las ciudades. Gratis, con reserva, y con alguien que te cuenta qué estás mirando."},
+  {"n": "The Haunted Youth", "m": "20:30 · Dabadaba · 16 / 20 €", "d": "Dream pop con guitarras empañadas de reverb para cerrar el finde en Dabadaba. Plan perfecto para quien quiera rematar el domingo con algo de ruido bonito."}
  ],
  "manana": [
-  {
-   "n": "Darius Jones Trio",
-   "m": "19:00 · Teatro Victoria Eugenia · 20 €",
-   "d": "Darius Jones es uno de los saxos altos más personales del jazz de vanguardia neoyorquino. Trío, teatro con buena acústica y 20 €: plan de domingo para escuchar con atención."
-  },
-  {
-   "n": "Txistularis en la Plaza de la Constitución",
-   "m": "12:15 · Parte Vieja · gratis",
-   "d": "La banda municipal de txistularis en la plaza de siempre, a la hora del vermut. Gratis, al aire libre y muy de aquí."
-  },
-  {
-   "n": "Txikijazz: «Tela sonora»",
-   "m": "12:00 y 17:00 · Teatro Victoria Eugenia · 8 €",
-   "d": "Jazz pensado para los más pequeños, con dos pases para cuadrar la siesta. Buena forma de llevar a los críos al Victoria Eugenia sin que sea un concierto de mayores."
-  },
-  {
-   "n": "Ballet de Kiev: «El Corsario»",
-   "m": "18:30 · Kursaal · 35 / 51 €",
-   "d": "Ballet clásico de gran formato, con piratas, huidas y saltos de bravura. Si te apetece algo de espectáculo a la antigua, es la opción del domingo por la tarde."
-  }
+  {"n": "Corto: ay claridad", "m": "18:30 · Tabakalera · Gratis (inscripción)", "d": "Presentación de un cortometraje en Tabakalera, que siempre es buen sitio para ver cine de autor recién salido del horno. Gratis con inscripción: lunes con algo de luz."},
+  {"n": "Literaktum: Un metro cuadrado", "m": "19:00 · Librería Zubieta · Gratis", "d": "El festival literario de Donostia baja a la escala de librería de barrio. Gratis, cercano y con el encanto de hablar de libros rodeado de ellos."},
+  {"n": "Tertulia: Leïla Slimani", "m": "19:00 · Biblioteca Central (San Jerónimo) · Gratis", "d": "Tertulia literaria en torno a «J'emporterai le feu», de Leïla Slimani. Si lo has leído (o quieres que te convenzan), es la excusa perfecta para salir de casa un lunes."},
+  {"n": "Broke Carrey", "m": "20:30 · Dabadaba · 15 / 18 €", "d": "El único concierto con chicha del lunes, en la sala de referencia para directos pequeños en Donostia. Para quien no acepta que la semana empiece sin música en vivo."}
  ],
  "finde": [
-  {
-   "n": "Véronique Gens + Ensemble Les Surprises",
-   "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €",
-   "d": "Véronique Gens es una de las grandes sopranos del barroco francés, aquí con un ensemble especialista en ese repertorio. Hay entradas desde 11 €, así que no hay excusa."
-  },
-  {
-   "n": "Matinée de Miramón: «Eguzkilore»",
-   "m": "Sáb 28 · 11:00 · Miramón · 11 €",
-   "d": "La Euskadiko Orkestra en formato matinal, lejos del gran auditorio. Un plan de sábado por la mañana tranquilo y barato antes del pintxo."
-  },
-  {
-   "n": "Rock en el frontón: Odolkiak Ordainetan + Añube + Nafarroa 1512",
-   "m": "Sáb 28 · 21:30 · Txomiñenea (Astigarraga) · 15 €",
-   "d": "Tres bandas en un pilotaleku, el formato de concierto más vasco que hay. Para la noche del sábado, si lo tuyo son las guitarras y el ruido."
-  },
-  {
-   "n": "Cine: «Timbuktu»",
-   "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · gratis con invitación",
-   "d": "La película de Abderrahmane Sissako sobre la vida en Tombuctú bajo el yihadismo, premiada con varios César. Gratis y en Hondarribia: buen cierre de domingo."
-  }
+  {"n": "Véronique Gens + Ensemble Les Surprises", "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €", "d": "Véronique Gens es una de las grandes sopranos francesas, referencia absoluta en barroco. Con un ensemble barroco francés detrás, es probablemente el concierto clásico del mes."},
+  {"n": "Romería con los txistularis", "m": "Sáb 28 · 18:00 · Plaza de la Constitución · Gratis", "d": "La Banda Municipal de Txistularis monta romería en plena Parte Vieja. Gratis, al aire libre y con la plaza bailando: plan de sábado sin pensarlo mucho."},
+  {"n": "Cine: Timbuktu", "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · Gratis (con invitación)", "d": "La película de Abderrahmane Sissako sobre la ocupación yihadista de Tombuctú es tan bella como dura. Gratis con invitación en el ciclo Papillon de Hondarribia."},
+  {"n": "Este himno llevará la palabra euforia", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea en Gazteszena, en Egia, con un título que ya promete. A 10 €, una buena forma de cerrar el finde con algo distinto."}
  ]
 }
