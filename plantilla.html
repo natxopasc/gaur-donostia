@@ -25,7 +25,7 @@
   h1 span{color:var(--accent)}
   .date{color:var(--mute);font-size:14px}
   .tabs{display:flex;gap:6px;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px}
-  .tab{flex:1;border:0;background:none;color:var(--mute);font-family:Fraunces,serif;font-weight:600;font-size:17px;
+  .tab{flex:1;border:0;background:none;color:var(--mute);font-family:Fraunces,serif;font-weight:600;font-size:15px;
        padding:9px 0;border-radius:10px;cursor:pointer}
   .tab.on{background:var(--accent);color:#1a0f0a}
   .day{font-family:Fraunces,serif;font-weight:600;font-size:19px;color:var(--ink);margin:26px 0 2px}
@@ -50,6 +50,11 @@
   .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;background:#2c2420;color:#d9cfc4;margin-right:6px}
   .tag.free{background:#1d3324;color:var(--free)}
   .tag.last{background:#3a1d14;color:var(--accent)}
+  .month{font-family:Fraunces,serif;font-weight:600;font-size:19px;margin:24px 0 4px;text-transform:capitalize}
+  .why{color:var(--free);font-size:12px;margin:-4px 0 8px}
+  .cm{color:#cbbfb3;font-size:13px;margin-top:4px}
+  .ev .t.d{font-size:16px;line-height:1.1}
+  .ev .t.d small{display:block;font-family:Inter,sans-serif;font-size:11px;color:var(--mute);font-weight:500}
   .empty{color:var(--mute);padding:20px 0}
   footer{color:var(--mute);font-size:12px;margin-top:30px;line-height:1.6}
   footer a{color:var(--mute)}
@@ -147,8 +152,58 @@ function renderList(){
   document.getElementById("list").innerHTML = html;
 }
 
+const MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const DSEM = ["dom","lun","mar","mié","jue","vie","sáb"];
+const fd = s => { const d = new Date(s + "T12:00:00"); return {d, dia: d.getDate(), mes: MES[d.getMonth()], sem: DSEM[d.getDay()]}; };
+const cuando = e => { const a = fd(e.fecha); let s = `${a.sem} ${a.dia} ${a.mes.slice(0,3)}`;
+  if (e.fin) { const b = fd(e.fin); s += ` – ${b.sem} ${b.dia} ${b.mes.slice(0,3)}`; } return s; };
+
+function renderProximos(v){
+  const zonas = ["Todo", ...new Set([...v.para_ti, ...v.grandes].map(e => e.zona).filter(Boolean))];
+  if (!zonas.includes(current)) current = "Todo";
+  const ok = e => current === "Todo" || e.zona === current;
+
+  const title = document.getElementById("picks-title");
+  const pt = v.para_ti.filter(ok);
+  title.textContent = "Para ti";
+  title.style.display = pt.length ? "" : "none";
+  document.getElementById("picks").innerHTML = pt.map(p => `
+    <div class="pick"><h3>${esc(p.titulo)}</h3>
+      <div class="meta">${esc(cuando(p))} · ${esc(p.lugar)}${p.ciudad ? " (" + esc(p.ciudad) + ")" : ""}${p.precio ? " · " + esc(p.precio) : ""}</div>
+      ${p.porque ? `<div class="why">${esc(p.porque)}</div>` : ""}
+      <p>${esc(p.d)}</p>
+      ${p.url ? `<p><a href="${esc(p.url)}" target="_blank" rel="noopener" style="color:var(--accent)">Entradas e info →</a></p>` : ""}</div>`).join("");
+
+  document.getElementById("all-title").textContent = "Los grandes";
+  document.getElementById("filters").innerHTML = zonas.map(c =>
+    `<button class="chip ${c===current?'on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+    current = b.dataset.c; try { localStorage.setItem("gaur-cat", current); } catch(e){}
+    renderProximos(V());
+  });
+
+  const list = v.grandes.filter(ok);
+  let html = "", lastMonth = null;
+  for (const e of list){
+    const a = fd(e.fecha), m = `${a.mes} ${a.d.getFullYear()}`;
+    if (m !== lastMonth){ html += `<div class="month">${m}</div>`; lastMonth = m; }
+    const tags = (e.tag ? `<span class="tag last">${esc(e.tag)}</span>` : "");
+    const inner = `<div class="t d">${a.dia}<small>${a.sem}${e.fin ? " +" : ""}</small></div>
+      <div><div class="n">${esc(e.titulo)}</div>
+      <div class="p">${tags}${esc(e.lugar)}${e.ciudad ? " · " + esc(e.ciudad) : ""}${e.precio ? " · " + esc(e.precio) : ""}</div>
+      ${e.d ? `<div class="cm">${esc(e.d)}</div>` : ""}</div>`;
+    html += e.url ? `<a class="ev" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="ev">${inner}</div>`;
+  }
+  document.getElementById("list").innerHTML = html || '<div class="empty">Nada en esta zona.</div>';
+  document.getElementById("count").textContent = v.para_ti.length + v.grandes.length;
+}
+
 function render(){
   const v = V();
+  if (v.tipo === "proximos"){
+    document.getElementById("date").textContent = v.fecha + (v.actualizado ? ` · revisado el ${v.actualizado}` : "");
+    renderTabs(); renderProximos(v); return;
+  }
   document.getElementById("date").textContent = v.fecha;
   document.getElementById("all-title").textContent = "Todo lo " + (WHEN[v.k] || "");
   document.getElementById("count").textContent = v.eventos.length;

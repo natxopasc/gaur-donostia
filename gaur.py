@@ -294,6 +294,23 @@ def main():
         "eventos": [{k: x for k, x in e.items() if k != "i"} for e in v["eventos"]],
     } for v in vistas]
 
+    # Pestaña «Próximos»: la rellena cada semana la tarea de proximos.py.
+    ruta_proximos = os.path.join(CARPETA, "proximos.json")
+    if os.path.exists(ruta_proximos):
+        with open(ruta_proximos, encoding="utf-8") as f:
+            prox = json.load(f)
+        hoy_txt = hoy.isoformat()
+        vigentes = lambda lista: [e for e in lista if (e.get("fin") or e["fecha"]) >= hoy_txt]
+        datos.append({
+            "k": "proximos", "tab": "Próximos", "tipo": "proximos",
+            "fecha": f"Conciertos y festivales hasta {prox.get('hasta_txt', '')}".strip(),
+            "actualizado": prox.get("actualizado", ""),
+            "para_ti": vigentes(prox.get("para_ti", [])),
+            "grandes": vigentes(prox.get("grandes", [])),
+            "picks": [], "eventos": [],
+        })
+        print(f"   Próximos: {len(datos[-1]['para_ti'])} para ti, {len(datos[-1]['grandes'])} grandes")
+
     salida = os.path.join(CARPETA, "index.html")
     generar_html(datos, salida)
     print(f"4) Listo: {salida}")
