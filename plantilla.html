@@ -11,6 +11,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
+<script data-goatcounter="https://natxopas.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -106,6 +107,8 @@ const fromHash = location.hash.slice(1);
 if (DATA.some(v => v.k === fromHash)) view = fromHash;
 
 const V = () => DATA.find(v => v.k === view);
+// Estadísticas (GoatCounter): solo cuenta acciones, sin datos personales.
+const gc = (path, title) => { try { window.goatcounter && window.goatcounter.count({path, title: title || path, event: true}); } catch(e){} };
 const esc = s => String(s || "").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isFree = e => /gratis/i.test(e.p);
 const WHEN = {hoy: "de hoy", manana: "de mañana", finde: "del finde"};
@@ -132,7 +135,7 @@ document.addEventListener("click", ev => {
   const b = ev.target.closest(".star"); if (!b) return;
   ev.preventDefault(); ev.stopPropagation();
   const k = b.dataset.k;
-  if (k in SAVED) delete SAVED[k]; else if (REG[k]) SAVED[k] = REG[k];
+  if (k in SAVED) delete SAVED[k]; else if (REG[k]) { SAVED[k] = REG[k]; gc("guardar-" + view, "★ Guardar (" + view + ")"); }
   persist();
   if (view === "guardados" || ["hoy", "manana", "finde"].includes(view)) { const y = window.scrollY; render(); window.scrollTo(0, y); }
   else { document.querySelectorAll(".star").forEach(s => { if (s.dataset.k === k){ const on = k in SAVED; s.classList.toggle("on", on); s.textContent = on ? "★" : "☆"; } }); renderTabs(); }
@@ -168,6 +171,7 @@ function renderTabs(){
   document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
     view = b.dataset.k;
     history.replaceState(null, "", "#" + view);
+    gc("pestaña-" + view, "Pestaña: " + view);
     render(); window.scrollTo(0, 0);
   });
 }
@@ -347,7 +351,7 @@ function renderGuardados(){
       <button class="star on" data-k="${esc(k)}" aria-label="Quitar de guardados">★</button></div>`;
   }
   document.getElementById("list").innerHTML = html;
-  document.querySelectorAll("[data-ics]").forEach(b => b.onclick = () => ics(SAVED[b.dataset.ics]));
+  document.querySelectorAll("[data-ics]").forEach(b => b.onclick = () => { gc("calendario", "📅 Al calendario"); ics(SAVED[b.dataset.ics]); });
   document.getElementById("count").textContent = items.length;
 }
 
