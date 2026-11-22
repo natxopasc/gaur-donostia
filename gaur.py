@@ -4,7 +4,7 @@ mañana y el próximo fin de semana.
 
 Qué hace, en 4 pasos:
   1. Descarga los eventos de la API abierta de Kulturklik (Gobierno Vasco)
-     para cada día que hace falta (hoy, mañana, sábado y domingo).
+     para cada día que hace falta (hoy, mañana y viernes a domingo).
   2. Se queda con los de Donostia y los pueblos cercanos y los agrupa en
      tres vistas: "hoy", "manana" y "finde".
   3. Le pide a Claude una selección de 4 planes por vista, con un comentario breve.
@@ -23,8 +23,8 @@ picks.json es un objeto con una lista por vista:
 Con cualquiera de las dos opciones sin API, el script guarda también
 eventos.json (las tres vistas ya filtradas), útil para hacer la selección a mano.
 
-Qué es "el finde": de lunes a viernes, el sábado y domingo que vienen;
-en sábado o domingo, el fin de semana siguiente (este ya lo cubren Hoy y Mañana).
+Qué es "el finde": viernes, sábado y domingo. De lunes a viernes, el de esa
+semana (el viernes incluye el propio día); en sábado o domingo, el siguiente.
 
 Requisitos:
   pip install requests anthropic
@@ -184,27 +184,30 @@ def fecha_bonita(dia: date) -> str:
     return f"{DIAS[dia.weekday()]}, {dia.day} de {MESES[dia.month - 1]} de {dia.year}"
 
 
-def fecha_finde(sab: date, dom: date) -> str:
-    if sab.month == dom.month:
-        return f"Sábado {sab.day} y domingo {dom.day} de {MESES[dom.month - 1]}"
-    return f"Sábado {sab.day} de {MESES[sab.month - 1]} y domingo {dom.day} de {MESES[dom.month - 1]}"
+def fecha_finde(vie: date, dom: date) -> str:
+    sab = vie + timedelta(days=1)
+    if vie.month == dom.month:
+        return f"Viernes {vie.day}, sábado {sab.day} y domingo {dom.day} de {MESES[dom.month - 1]}"
+    mes = lambda d: MESES[d.month - 1]
+    if sab.month == dom.month:  # el viernes es el último día del mes
+        return f"Viernes {vie.day} de {mes(vie)}, sábado {sab.day} y domingo {dom.day} de {mes(dom)}"
+    return f"Viernes {vie.day}, sábado {sab.day} de {mes(sab)} y domingo {dom.day} de {mes(dom)}"
 
 
 def definir_vistas(hoy: date) -> list[dict]:
-    """Las tres pestañas de la app y los días que entran en cada una."""
+    """Las tres pestañas de la app y los días que entran en cada una.
+    Finde = viernes, sábado y domingo: de lunes a viernes, el de esa semana
+    (el viernes incluye el propio día); en sábado o domingo, el siguiente."""
     manana = hoy + timedelta(days=1)
-    dias_hasta_sabado = (5 - hoy.weekday()) % 7
-    if hoy.weekday() >= 5:  # sábado o domingo: el finde siguiente
-        dias_hasta_sabado += 7 if hoy.weekday() == 5 else 0
-    sab = hoy + timedelta(days=dias_hasta_sabado)
-    dom = sab + timedelta(days=1)
+    vie = hoy + timedelta(days=(4 - hoy.weekday()) % 7)
+    sab, dom = vie + timedelta(days=1), vie + timedelta(days=2)
     return [
         {"k": "hoy", "tab": "Hoy", "dias": [hoy], "fecha": fecha_bonita(hoy),
          "cuando": f"hoy, {fecha_bonita(hoy)}"},
         {"k": "manana", "tab": "Mañana", "dias": [manana], "fecha": fecha_bonita(manana),
          "cuando": f"mañana, {fecha_bonita(manana)}"},
-        {"k": "finde", "tab": "Finde", "dias": [sab, dom], "fecha": fecha_finde(sab, dom),
-         "cuando": f"el próximo fin de semana ({fecha_finde(sab, dom)})"},
+        {"k": "finde", "tab": "Finde", "dias": [vie, sab, dom], "fecha": fecha_finde(vie, dom),
+         "cuando": f"el fin de semana ({fecha_finde(vie, dom)})"},
     ]
 
 
