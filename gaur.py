@@ -154,6 +154,8 @@ def limpiar(eventos: list[dict], dia: date) -> list[dict]:
         salida.append({
             "i": e.get("id", ""),
             "w": f"{DIAS_CORTOS[dia.weekday()]} {dia.day}",
+            "f": hoy,
+            "fin": solo_dia(e.get("endDate")) if varios_dias else "",
             "t": "" if varios_dias else (e.get("openingHoursEs") or "").strip()[:13],
             "n": (e.get("nameEs") or "Sin título").strip(),
             "c": CATEGORIAS.get(e.get("typeEs"), e.get("typeEs") or "Otros"),

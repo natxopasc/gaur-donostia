@@ -55,6 +55,13 @@
   .cm{color:#cbbfb3;font-size:13px;margin-top:4px}
   .ev .t.d{font-size:16px;line-height:1.1}
   .ev .t.d small{display:block;font-family:Inter,sans-serif;font-size:11px;color:var(--mute);font-weight:500}
+  .ev{grid-template-columns:54px 1fr 34px !important}
+  .star{border:0;background:none;color:var(--mute);font-size:22px;line-height:1;cursor:pointer;align-self:start;padding:2px 0;font-family:inherit}
+  .star.on{color:var(--accent2)}
+  .pick .star{float:right;margin:-4px -4px 0 8px}
+  .acts{margin-top:6px;display:flex;gap:14px;font-size:13px}
+  .acts button{border:0;background:none;color:var(--accent);font:inherit;cursor:pointer;padding:0}
+  .hint{color:var(--mute);font-size:13px;margin:8px 0 0}
   .empty{color:var(--mute);padding:20px 0}
   footer{color:var(--mute);font-size:12px;margin-top:30px;line-height:1.6}
   footer a{color:var(--mute)}
@@ -83,6 +90,7 @@
 
 <script>
 const DATA = __DATA__;
+DATA.push({k: "guardados", tab: "★", tipo: "guardados", picks: [], eventos: []});
 
 let view = DATA[0].k, current = "Todo";
 try { current = localStorage.getItem("gaur-cat") || "Todo"; } catch(e){}
@@ -93,10 +101,62 @@ const V = () => DATA.find(v => v.k === view);
 const esc = s => String(s || "").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isFree = e => /gratis/i.test(e.p);
 const WHEN = {hoy: "de hoy", manana: "de mañana", finde: "del finde"};
+const ORDEN = ["Música", "Teatro", "Cine", "Expos"];   // primero estas, luego el resto
 
+/* ---------- Guardados: viven solo en este navegador (localStorage) ---------- */
+const SKEY = "gaur-guardados";
+const HOY = new Date().toLocaleDateString("sv-SE", {timeZone: "Europe/Madrid"});
+let SAVED = {};
+try { SAVED = JSON.parse(localStorage.getItem(SKEY) || "{}"); } catch(e){}
+for (const k in SAVED) if ((SAVED[k].fin || SAVED[k].f) < HOY) delete SAVED[k];   // fuera lo pasado
+const persist = () => { try { localStorage.setItem(SKEY, JSON.stringify(SAVED)); } catch(e){} };
+const REG = {};
+const itemOf = e => e.fecha
+  ? {f: e.fecha, fin: e.fin || "", t: e.hora || "", n: e.titulo, l: [e.lugar, e.ciudad].filter(Boolean).join(" · "), p: e.precio || "", u: e.url || ""}
+  : {f: e.f, fin: e.fin || "", t: e.t || "", n: e.n, l: e.l, p: e.p || "", u: e.u || ""};
+const keyOf = it => `${it.f}|${it.n}|${it.l}`.toLowerCase();
+function starBtn(e){
+  const it = itemOf(e); if (!it.f) return "";
+  const k = keyOf(it); REG[k] = it; const on = k in SAVED;
+  return `<button class="star ${on ? "on" : ""}" data-k="${esc(k)}" aria-label="${on ? "Quitar de guardados" : "Guardar"}">${on ? "★" : "☆"}</button>`;
+}
+document.addEventListener("click", ev => {
+  const b = ev.target.closest(".star"); if (!b) return;
+  ev.preventDefault(); ev.stopPropagation();
+  const k = b.dataset.k;
+  if (k in SAVED) delete SAVED[k]; else if (REG[k]) SAVED[k] = REG[k];
+  persist();
+  if (view === "guardados") render();
+  else { document.querySelectorAll(".star").forEach(s => { if (s.dataset.k === k){ const on = k in SAVED; s.classList.toggle("on", on); s.textContent = on ? "★" : "☆"; } }); renderTabs(); }
+}, true);
+
+/* ---------- Añadir al calendario (.ics) ---------- */
+function ics(it){
+  const d = it.f.replace(/-/g, ""), m = /(\d{1,2})[:.h](\d{2})/i.exec(it.t || "");
+  const txt = s => String(s || "").replace(/[\\,;]/g, c => "\\" + c).replace(/\n/g, " ");
+  let when;
+  if (m) {
+    const h = m[1].padStart(2, "0"), h2 = String(Math.min(23, +m[1] + 2)).padStart(2, "0");
+    when = `DTSTART;TZID=Europe/Madrid:${d}T${h}${m[2]}00\r\nDTEND;TZID=Europe/Madrid:${d}T${h2}${m[2]}00`;
+  } else {
+    const fin = new Date((it.fin || it.f) + "T12:00:00"); fin.setDate(fin.getDate() + 1);
+    when = `DTSTART;VALUE=DATE:${d}\r\nDTEND;VALUE=DATE:${fin.toISOString().slice(0,10).replace(/-/g, "")}`;
+  }
+  const body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Gaur Donostia//ES", "BEGIN:VEVENT",
+    `UID:${d}-${Math.random().toString(36).slice(2)}@gaur`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0,15)}Z`,
+    when, `SUMMARY:${txt(it.n)}`, `LOCATION:${txt(it.l)}`, `DESCRIPTION:${txt([it.p, it.u].filter(Boolean).join(" · "))}`,
+    it.u ? `URL:${it.u}` : "", "BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${txt(it.n)}`, "TRIGGER:-P1D", "END:VALARM",
+    "END:VEVENT", "END:VCALENDAR"].filter(Boolean).join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([body], {type: "text/calendar"}));
+  a.download = "gaur-" + d + ".ics"; document.body.appendChild(a); a.click(); a.remove();
+}
+
+/* ---------- Pestañas ---------- */
 function renderTabs(){
+  const n = Object.keys(SAVED).length;
   document.getElementById("tabs").innerHTML = DATA.map(v =>
-    `<button class="tab ${v.k===view?'on':''}" data-k="${v.k}">${v.tab}</button>`).join("");
+    `<button class="tab ${v.k===view?'on':''}" data-k="${v.k}">${v.k === "guardados" ? "★" + (n ? " " + n : "") : v.tab}</button>`).join("");
   document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
     view = b.dataset.k;
     history.replaceState(null, "", "#" + view);
@@ -114,8 +174,10 @@ function renderPicks(){
 }
 
 function renderFilters(){
-  const cats = ["Todo", ...new Set(V().eventos.map(e => e.c)), "Gratis"];
+  const present = new Set(V().eventos.map(e => e.c));
+  const cats = ["Todo", ...ORDEN.filter(c => present.has(c)), ...[...present].filter(c => !ORDEN.includes(c)), "Gratis"];
   if (!cats.includes(current)) current = "Todo";
+  document.getElementById("filters").style.display = "";
   document.getElementById("filters").innerHTML = cats.map(c =>
     `<button class="chip ${c===current?'on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
   document.querySelectorAll(".chip").forEach(b => b.onclick = () => {
@@ -146,7 +208,7 @@ function renderList(){
     const tags = `<span class="tag">${esc(e.c)}</span>` + (isFree(e)?'<span class="tag free">gratis</span>':'') + (e.last?'<span class="tag last">último día</span>':'');
     const inner = `<div class="t">${esc(e.t) || "—"}</div>
       <div><div class="n">${esc(e.n)}</div>
-      <div class="p">${tags}${esc(e.l)}${e.p && !isFree(e) ? " · " + esc(e.p) : ""}</div></div>`;
+      <div class="p">${tags}${esc(e.l)}${e.p && !isFree(e) ? " · " + esc(e.p) : ""}</div></div>${starBtn(e)}`;
     html += e.u ? `<a class="ev" href="${esc(e.u)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="ev">${inner}</div>`;
   }
   document.getElementById("list").innerHTML = html;
@@ -168,13 +230,14 @@ function renderProximos(v){
   title.textContent = "Para ti";
   title.style.display = pt.length ? "" : "none";
   document.getElementById("picks").innerHTML = pt.map(p => `
-    <div class="pick"><h3>${esc(p.titulo)}</h3>
+    <div class="pick">${starBtn(p)}<h3>${esc(p.titulo)}</h3>
       <div class="meta">${esc(cuando(p))} · ${esc(p.lugar)}${p.ciudad ? " (" + esc(p.ciudad) + ")" : ""}${p.precio ? " · " + esc(p.precio) : ""}</div>
       ${p.porque ? `<div class="why">${esc(p.porque)}</div>` : ""}
       <p>${esc(p.d)}</p>
       ${p.url ? `<p><a href="${esc(p.url)}" target="_blank" rel="noopener" style="color:var(--accent)">Entradas e info →</a></p>` : ""}</div>`).join("");
 
   document.getElementById("all-title").textContent = "Los grandes";
+  document.getElementById("filters").style.display = "";
   document.getElementById("filters").innerHTML = zonas.map(c =>
     `<button class="chip ${c===current?'on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
   document.querySelectorAll(".chip").forEach(b => b.onclick = () => {
@@ -191,23 +254,50 @@ function renderProximos(v){
     const inner = `<div class="t d">${a.dia}<small>${a.sem}${e.fin ? " +" : ""}</small></div>
       <div><div class="n">${esc(e.titulo)}</div>
       <div class="p">${tags}${esc(e.lugar)}${e.ciudad ? " · " + esc(e.ciudad) : ""}${e.precio ? " · " + esc(e.precio) : ""}</div>
-      ${e.d ? `<div class="cm">${esc(e.d)}</div>` : ""}</div>`;
+      ${e.d ? `<div class="cm">${esc(e.d)}</div>` : ""}</div>${starBtn(e)}`;
     html += e.url ? `<a class="ev" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="ev">${inner}</div>`;
   }
   document.getElementById("list").innerHTML = html || '<div class="empty">Nada en esta zona.</div>';
   document.getElementById("count").textContent = v.para_ti.length + v.grandes.length;
 }
 
+function renderGuardados(){
+  document.getElementById("date").textContent = "Tus planes guardados";
+  document.getElementById("picks-title").style.display = "none";
+  document.getElementById("picks").innerHTML = "";
+  document.getElementById("all-title").textContent = "Guardados";
+  document.getElementById("filters").style.display = "none";
+  const items = Object.entries(SAVED).sort((a, b) => (a[1].f + a[1].t).localeCompare(b[1].f + b[1].t));
+  let html = `<p class="hint">Se guardan solo en este navegador: nadie más los ve, y no pasan de un móvil a otro. Pulsa ☆ en cualquier plan para añadirlo.</p>`;
+  if (!items.length) html += '<div class="empty">Todavía no has guardado nada.</div>';
+  let lastMonth = null;
+  for (const [k, it] of items){
+    REG[k] = it;
+    const a = fd(it.f), m = `${a.mes} ${a.d.getFullYear()}`;
+    if (m !== lastMonth){ html += `<div class="month">${m}</div>`; lastMonth = m; }
+    html += `<div class="ev"><div class="t d">${a.dia}<small>${a.sem}</small></div>
+      <div><div class="n">${esc(it.n)}</div>
+      <div class="p">${it.t ? esc(it.t) + " · " : ""}${esc(it.l)}${it.p ? " · " + esc(it.p) : ""}</div>
+      <div class="acts"><button data-ics="${esc(k)}">📅 Al calendario</button>${it.u ? `<a href="${esc(it.u)}" target="_blank" rel="noopener" style="color:var(--accent)">Info →</a>` : ""}</div></div>
+      <button class="star on" data-k="${esc(k)}" aria-label="Quitar de guardados">★</button></div>`;
+  }
+  document.getElementById("list").innerHTML = html;
+  document.querySelectorAll("[data-ics]").forEach(b => b.onclick = () => ics(SAVED[b.dataset.ics]));
+  document.getElementById("count").textContent = items.length;
+}
+
 function render(){
   const v = V();
+  renderTabs();
+  if (v.tipo === "guardados"){ renderGuardados(); return; }
   if (v.tipo === "proximos"){
     document.getElementById("date").textContent = v.fecha + (v.actualizado ? ` · revisado el ${v.actualizado}` : "");
-    renderTabs(); renderProximos(v); return;
+    renderProximos(v); return;
   }
   document.getElementById("date").textContent = v.fecha;
   document.getElementById("all-title").textContent = "Todo lo " + (WHEN[v.k] || "");
   document.getElementById("count").textContent = v.eventos.length;
-  renderTabs(); renderPicks(); renderFilters(); renderList();
+  renderPicks(); renderFilters(); renderList();
 }
 
 render();
