@@ -93,7 +93,7 @@
   <div id="list"></div>
 
   <footer>
-    Datos: <a href="https://www.kulturklik.euskadi.eus">Kulturklik</a> (Open Data Euskadi), actualizado 22/11/2026 21:05 · <span id="count"></span> eventos. Confirma horarios y entradas en la web de cada sala.
+    Datos: <a href="https://www.kulturklik.euskadi.eus">Kulturklik</a> (Open Data Euskadi), actualizado 22/11/2026 21:13 · <span id="count"></span> eventos. Confirma horarios y entradas en la web de cada sala.
   </footer>
 </div>
 
@@ -135,7 +135,7 @@ document.addEventListener("click", ev => {
   const b = ev.target.closest(".star"); if (!b) return;
   ev.preventDefault(); ev.stopPropagation();
   const k = b.dataset.k;
-  if (k in SAVED) delete SAVED[k]; else if (REG[k]) { SAVED[k] = REG[k]; gc("guardar-" + view, "★ Guardar (" + view + ")"); }
+  if (k in SAVED) delete SAVED[k]; else if (REG[k]) { SAVED[k] = REG[k]; const it = REG[k]; gc("★ " + it.n + " · " + it.f, "★ " + it.n + " (" + it.f + ", desde " + view + ")"); }
   persist();
   if (view === "guardados" || ["hoy", "manana", "finde"].includes(view)) { const y = window.scrollY; render(); window.scrollTo(0, y); }
   else { document.querySelectorAll(".star").forEach(s => { if (s.dataset.k === k){ const on = k in SAVED; s.classList.toggle("on", on); s.textContent = on ? "★" : "☆"; } }); renderTabs(); }
