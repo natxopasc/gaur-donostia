@@ -1,0 +1,90 @@
+[
+ {
+  "fecha": "2026-12-03",
+  "fin": "",
+  "hora": "20:30",
+  "titulo": "Arnaud Tsamère: nuevo espectáculo",
+  "tipo": "Teatro",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "34 / 38 €",
+  "url": "https://www.jds.fr/bayonne/spectacles/humour/arnaud-tsamere-nouveau-spectacle-tournee-724461_A"
+ },
+ {
+  "fecha": "2026-12-05",
+  "fin": "",
+  "hora": "20:30",
+  "titulo": "«Cochons d'Inde» (Sébastien Thiéry)",
+  "tipo": "Teatro",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "39,50 / 65 €",
+  "url": "https://www.jds.fr/bayonne/spectacles/humour/cochons-d-inde-1585207_A"
+ },
+ {
+  "fecha": "2026-12-06",
+  "fin": "",
+  "hora": "",
+  "titulo": "Danse avec les Stars: la tournée des pros",
+  "tipo": "Danza",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "",
+  "url": "https://unidivers.fr/event/danse-avec-les-stars-la-tournee-des-pros-biarritz-pyrenees-atlantiques-2026-12-06/"
+ },
+ {
+  "fecha": "2026-12-10",
+  "fin": "",
+  "hora": "20:30",
+  "titulo": "D'Jal: «En pleine conscience»",
+  "tipo": "Teatro",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "33 / 38 €",
+  "url": "https://www.box.fr/download/100/prog%20CE%20BIARRITZ%202627.pdf"
+ },
+ {
+  "fecha": "2026-12-13",
+  "fin": "",
+  "hora": "",
+  "titulo": "Ensemble Orchestral de Biarritz: «Il était une fois… Ennio Morricone»",
+  "tipo": "Música",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "",
+  "url": "https://unidivers.fr/event/ensemble-orchestral-de-biarritz-concert-il-etait-une-fois-ennio-morricone-biarritz-pyrenees-atlantiques-2026-12-13/"
+ },
+ {
+  "fecha": "2026-12-19",
+  "fin": "",
+  "hora": "20:30",
+  "titulo": "«Le Bourgeois gentilhomme» con Jean-Paul Rouve",
+  "tipo": "Teatro",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "39,50 / 65 €",
+  "url": "https://www.jds.fr/bayonne/spectacles/theatre/le-bourgeois-gentilhomme-avec-jean-paul-rouve-1585210_A"
+ },
+ {
+  "fecha": "2026-12-31",
+  "fin": "",
+  "hora": "",
+  "titulo": "Le Grand Cabaret de la Saint-Sylvestre",
+  "tipo": "Teatro",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "39,50 / 65 €",
+  "url": "https://www.jds.fr/bayonne/spectacles/spectacle-musical/le-grand-cabaret-de-la-st-sylvestre-1585235_A"
+ },
+ {
+  "fecha": "2027-01-16",
+  "fin": "",
+  "hora": "20:30",
+  "titulo": "«El lago de los cisnes» (Sofia City Ballet)",
+  "tipo": "Danza",
+  "lugar": "Gare du Midi",
+  "ciudad": "Biarritz",
+  "precio": "39,50 / 65 €",
+  "url": "https://www.jds.fr/bayonne/spectacles/danse/le-lac-des-cygnes-sofia-city-ballet-1585197_A"
+ }
+]

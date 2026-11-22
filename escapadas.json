@@ -76,6 +76,18 @@
    "d": "El coro sudafricano en el Baluarte, en plena antesala de la Navidad."
   },
   {
+   "fecha": "2026-12-19",
+   "fin": "",
+   "hora": "20:30",
+   "titulo": "«Le Bourgeois gentilhomme» con Jean-Paul Rouve",
+   "tipo": "Teatro",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "39,50 / 65 €",
+   "url": "https://www.jds.fr/bayonne/spectacles/theatre/le-bourgeois-gentilhomme-avec-jean-paul-rouve-1585210_A",
+   "d": "Molière en la Gare du Midi, con Jean-Paul Rouve como Monsieur Jourdain. Teatro en francés: plan perfecto para una escapada de sábado a Biarritz."
+  },
+  {
    "fecha": "2026-12-20",
    "fin": "",
    "hora": "20:00",
@@ -2017,6 +2029,18 @@
   {
    "fecha": "2026-12-03",
    "fin": "",
+   "hora": "20:30",
+   "titulo": "Arnaud Tsamère: nuevo espectáculo",
+   "tipo": "Teatro",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "34 / 38 €",
+   "url": "https://www.jds.fr/bayonne/spectacles/humour/arnaud-tsamere-nouveau-spectacle-tournee-724461_A",
+   "fuente": "web"
+  },
+  {
+   "fecha": "2026-12-03",
+   "fin": "",
    "hora": "21:30",
    "titulo": "La Txama + Pinaka",
    "tipo": "Música",
@@ -2358,6 +2382,18 @@
   {
    "fecha": "2026-12-05",
    "fin": "",
+   "hora": "20:30",
+   "titulo": "«Cochons d'Inde» (Sébastien Thiéry)",
+   "tipo": "Teatro",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "39,50 / 65 €",
+   "url": "https://www.jds.fr/bayonne/spectacles/humour/cochons-d-inde-1585207_A",
+   "fuente": "web"
+  },
+  {
+   "fecha": "2026-12-05",
+   "fin": "",
    "hora": "21:00",
    "titulo": "CYRIL KAMER",
    "tipo": "Música",
@@ -2519,6 +2555,18 @@
    "ciudad": "Vitoria",
    "precio": "30 / 35 €",
    "url": "https://entradas.saurom.es/inicio/126-vitoria-gasteiz.html"
+  },
+  {
+   "fecha": "2026-12-06",
+   "fin": "",
+   "hora": "",
+   "titulo": "Danse avec les Stars: la tournée des pros",
+   "tipo": "Danza",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "",
+   "url": "https://unidivers.fr/event/danse-avec-les-stars-la-tournee-des-pros-biarritz-pyrenees-atlantiques-2026-12-06/",
+   "fuente": "web"
   },
   {
    "fecha": "2026-12-07",
@@ -2684,6 +2732,18 @@
    "ciudad": "Bilbao",
    "precio": "23 / 25 €",
    "url": "https://entradium.com/events/victor-de-diego-haize-berriak"
+  },
+  {
+   "fecha": "2026-12-10",
+   "fin": "",
+   "hora": "20:30",
+   "titulo": "D'Jal: «En pleine conscience»",
+   "tipo": "Teatro",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "33 / 38 €",
+   "url": "https://www.box.fr/download/100/prog%20CE%20BIARRITZ%202627.pdf",
+   "fuente": "web"
   },
   {
    "fecha": "2026-12-10",
@@ -3313,6 +3373,18 @@
    "url": "http://www.villava.es/"
   },
   {
+   "fecha": "2026-12-13",
+   "fin": "",
+   "hora": "",
+   "titulo": "Ensemble Orchestral de Biarritz: «Il était une fois… Ennio Morricone»",
+   "tipo": "Música",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "",
+   "url": "https://unidivers.fr/event/ensemble-orchestral-de-biarritz-concert-il-etait-une-fois-ennio-morricone-biarritz-pyrenees-atlantiques-2026-12-13/",
+   "fuente": "web"
+  },
+  {
    "fecha": "2026-12-14",
    "fin": "",
    "hora": "19:30",
@@ -3773,6 +3845,18 @@
    "ciudad": "Pamplona",
    "precio": "20€",
    "url": "https://es.patronbase.com/_Gayarre/Performances/Single?prod_id=17S&perf_id=1&_gl=1*4yosg8*_ga*NzE5NTMwNzM1LjE3NTU2ODYyOTU.*_ga_3JV1G154RT*czE3ODgzMzcxOTUkbzE1JGcxJHQxNzg4MzM4MDYzJGozOSRsMCRoMA.."
+  },
+  {
+   "fecha": "2026-12-19",
+   "fin": "",
+   "hora": "20:30",
+   "titulo": "«Le Bourgeois gentilhomme» con Jean-Paul Rouve",
+   "tipo": "Teatro",
+   "lugar": "Gare du Midi",
+   "ciudad": "Biarritz",
+   "precio": "39,50 / 65 €",
+   "url": "https://www.jds.fr/bayonne/spectacles/theatre/le-bourgeois-gentilhomme-avec-jean-paul-rouve-1585210_A",
+   "fuente": "web"
   },
   {
    "fecha": "2026-12-19",

@@ -9,6 +9,10 @@ Qué hace:
      en las próximas 4 semanas (sin tributos ni Candlelight).
   3. Junta duplicados y deja un formato corto. Guarda escapadas_candidatos.json.
 
+Extras: lo que Kulturklik no trae (sobre todo la Gare du Midi de Biarritz) se busca
+en la web y se guarda en escapadas_extra.json, con el mismo formato y la URL de la
+fuente. El script lo mezcla con lo de Kulturklik si cae dentro de las 4 semanas.
+
 La selección «Merece el viaje» (unos 6 planes) la hace Claude en la tarea
 semanal y se guarda, junto con la lista, en escapadas.json:
   python escapadas.py                         # solo candidatos
@@ -95,6 +99,23 @@ def candidatos(hoy, hasta) -> list[dict]:
             "precio": (e.get("priceEs") or "").strip(),
             "url": e.get("purchaseUrlEs") or e.get("sourceUrlEs") or e.get("urlEventEs") or "",
         })
+    # Extras encontrados en la web (Gare du Midi, etc.)
+    ruta_extra = os.path.join(CARPETA, "escapadas_extra.json")
+    if os.path.exists(ruta_extra):
+        with open(ruta_extra, encoding="utf-8") as f:
+            extras = json.load(f)
+        n = 0
+        for x in extras:
+            fin = x.get("fin") or x["fecha"]
+            if fin < hoy or x["fecha"] > hasta:
+                continue
+            clave = (x["titulo"].lower(), x["fecha"], x["ciudad"])
+            if clave in vistos:
+                continue
+            vistos.add(clave)
+            salida.append({**x, "fecha": max(x["fecha"], hoy), "fuente": "web"})
+            n += 1
+        print(f"   + {n} extras de la web (escapadas_extra.json)")
     salida.sort(key=lambda x: (x["fecha"], x["hora"] or "99", x["titulo"]))
     return salida
 
