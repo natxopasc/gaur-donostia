@@ -134,7 +134,7 @@ document.addEventListener("click", ev => {
   const k = b.dataset.k;
   if (k in SAVED) delete SAVED[k]; else if (REG[k]) SAVED[k] = REG[k];
   persist();
-  if (view === "guardados") render();
+  if (view === "guardados" || ["hoy", "manana", "finde"].includes(view)) { const y = window.scrollY; render(); window.scrollTo(0, y); }
   else { document.querySelectorAll(".star").forEach(s => { if (s.dataset.k === k){ const on = k in SAVED; s.classList.toggle("on", on); s.textContent = on ? "★" : "☆"; } }); renderTabs(); }
 }, true);
 
@@ -174,11 +174,26 @@ function renderTabs(){
 
 function renderPicks(){
   const v = V(), title = document.getElementById("picks-title");
+  // Tus ★ de estos días se añaden arriba; debajo, la selección de Claude tal cual.
+  const dias = [...new Set(v.eventos.map(e => e.f).filter(Boolean))];
+  const mios = Object.entries(SAVED)
+    .filter(([k, it]) => dias.some(d => d >= it.f && d <= (it.fin || it.f)))
+    .sort((a, b) => (a[1].f + a[1].t).localeCompare(b[1].f + b[1].t));
+  const norm = s => String(s || "").toLowerCase().replace(/[«»"'“”:]/g, "").trim();
+  const repetido = p => mios.some(([k, it]) => norm(it.n).includes(norm(p.n)) || norm(p.n).includes(norm(it.n)));
+  const editor = v.picks.filter(p => !repetido(p));   // la selección de Claude, entera
   title.textContent = "Mi selección " + (WHEN[v.k] || "");
-  title.style.display = v.picks.length ? "" : "none";
-  document.getElementById("picks").innerHTML = v.picks.map((p,i)=>`
-    <div class="pick"><div class="num">${i+1}</div>
+  title.style.display = (mios.length || editor.length) ? "" : "none";
+  let html = mios.map(([k, it]) => { REG[k] = it; const a = fd(it.f); return `
+    <div class="pick"><button class="star on" data-k="${esc(k)}" aria-label="Quitar de guardados">★</button>
+      <h3>${esc(it.n)}</h3>
+      <div class="meta">${v.varios ? a.sem + " " + a.dia + " · " : ""}${it.t ? esc(it.t) + " · " : ""}${esc(it.l)}${it.p ? " · " + esc(it.p) : ""}</div>
+      <div class="why">La guardaste tú</div>
+      ${it.u ? `<p><a href="${esc(it.u)}" target="_blank" rel="noopener" style="color:var(--accent)">Info →</a></p>` : ""}</div>`; }).join("");
+  html += editor.map((p, i) => `
+    <div class="pick"><div class="num">${mios.length + i + 1}</div>
       <h3>${esc(p.n)}</h3><div class="meta">${esc(p.m)}</div><p>${esc(p.d)}</p></div>`).join("");
+  document.getElementById("picks").innerHTML = html;
 }
 
 function renderFilters(){
