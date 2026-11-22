@@ -24,9 +24,11 @@
   h1{font-family:Fraunces,serif;font-weight:800;font-size:44px;line-height:1;margin:6px 0 4px;letter-spacing:-.02em}
   h1 span{color:var(--accent)}
   .date{color:var(--mute);font-size:14px}
-  .tabs{display:flex;gap:6px;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px}
-  .tab{flex:1;border:0;background:none;color:var(--mute);font-family:Fraunces,serif;font-weight:600;font-size:15px;
-       padding:9px 0;border-radius:10px;cursor:pointer}
+  .tabs{display:flex;gap:4px;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px;
+        overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;border:0;white-space:nowrap;background:none;color:var(--mute);font-family:Fraunces,serif;font-weight:600;font-size:15px;
+       padding:9px 11px;border-radius:10px;cursor:pointer}
   .tab.on{background:var(--accent);color:#1a0f0a}
   .day{font-family:Fraunces,serif;font-weight:600;font-size:19px;color:var(--ink);margin:26px 0 2px}
   h2{font-family:Fraunces,serif;font-weight:600;font-size:22px;margin:26px 0 12px}
@@ -62,6 +64,8 @@
   .acts{margin-top:6px;display:flex;gap:14px;font-size:13px}
   .acts button{border:0;background:none;color:var(--accent);font:inherit;cursor:pointer;padding:0}
   .hint{color:var(--mute);font-size:13px;margin:8px 0 0}
+  .chip.sep{border:0;background:none;padding:7px 2px;color:var(--line);cursor:default}
+  .tag.city{background:#1d2633;color:#9cc3ff}
   .empty{color:var(--mute);padding:20px 0}
   footer{color:var(--mute);font-size:12px;margin-top:30px;line-height:1.6}
   footer a{color:var(--mute)}
@@ -261,6 +265,48 @@ function renderProximos(v){
   document.getElementById("count").textContent = v.para_ti.length + v.grandes.length;
 }
 
+
+/* ---------- Escapadas: Bilbao, Vitoria, Pamplona, Biarritz ---------- */
+let escCity = "", escType = "";
+function renderEscapadas(v){
+  document.getElementById("date").textContent = v.fecha + (v.actualizado ? ` · revisado el ${v.actualizado}` : "");
+  const okE = e => (!escCity || e.ciudad === escCity) && (!escType || e.tipo === escType);
+  const title = document.getElementById("picks-title");
+  const dest = v.destacados.filter(okE);
+  title.textContent = "Merece el viaje";
+  title.style.display = dest.length ? "" : "none";
+  document.getElementById("picks").innerHTML = dest.map(p => `
+    <div class="pick">${starBtn(p)}<h3>${esc(p.titulo)}</h3>
+      <div class="meta">${esc(cuando(p))}${p.hora ? " · " + esc(p.hora) : ""} · ${esc(p.lugar)} (${esc(p.ciudad)})${p.precio ? " · " + esc(p.precio) : ""}</div>
+      <p>${esc(p.d)}</p>
+      ${p.url ? `<p><a href="${esc(p.url)}" target="_blank" rel="noopener" style="color:var(--accent)">Entradas e info →</a></p>` : ""}</div>`).join("");
+
+  document.getElementById("all-title").textContent = "Todo, día a día";
+  const ciudades = ["Bilbao", "Vitoria", "Pamplona", "Biarritz"].filter(c => v.lista.some(e => e.ciudad === c));
+  const tipos = ["Música", "Teatro", "Danza", "Festival"].filter(c => v.lista.some(e => e.tipo === c));
+  const f = document.getElementById("filters"); f.style.display = "";
+  f.innerHTML = `<button class="chip ${!escCity && !escType ? "on" : ""}" data-r="1">Todo</button>`
+    + ciudades.map(c => `<button class="chip ${escCity===c?"on":""}" data-city="${c}">${c}</button>`).join("")
+    + `<span class="chip sep">|</span>`
+    + tipos.map(c => `<button class="chip ${escType===c?"on":""}" data-type="${c}">${c}</button>`).join("");
+  f.querySelectorAll(".chip[data-r]").forEach(b => b.onclick = () => { escCity = escType = ""; renderEscapadas(V()); });
+  f.querySelectorAll(".chip[data-city]").forEach(b => b.onclick = () => { escCity = escCity === b.dataset.city ? "" : b.dataset.city; renderEscapadas(V()); });
+  f.querySelectorAll(".chip[data-type]").forEach(b => b.onclick = () => { escType = escType === b.dataset.type ? "" : b.dataset.type; renderEscapadas(V()); });
+
+  const list = v.lista.filter(okE);
+  let html = "", lastDay = null;
+  for (const e of list){
+    if (e.fecha !== lastDay){ const a = fd(e.fecha); html += `<div class="day">${a.sem} ${a.dia} ${a.mes}</div>`; lastDay = e.fecha; }
+    const hasta = e.fin && e.fin > e.fecha ? ` · hasta el ${fd(e.fin).dia} ${fd(e.fin).mes.slice(0,3)}` : "";
+    const inner = `<div class="t">${esc(e.hora) || "—"}</div>
+      <div><div class="n">${esc(e.titulo)}</div>
+      <div class="p"><span class="tag">${esc(e.tipo)}</span><span class="tag city">${esc(e.ciudad)}</span>${esc(e.lugar)}${e.precio ? " · " + esc(e.precio) : ""}${hasta}</div></div>${starBtn(e)}`;
+    html += e.url ? `<a class="ev" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="ev">${inner}</div>`;
+  }
+  document.getElementById("list").innerHTML = html || '<div class="empty">Nada con estos filtros.</div>';
+  document.getElementById("count").textContent = v.lista.length;
+}
+
 function renderGuardados(){
   document.getElementById("date").textContent = "Tus planes guardados";
   document.getElementById("picks-title").style.display = "none";
@@ -290,6 +336,7 @@ function render(){
   const v = V();
   renderTabs();
   if (v.tipo === "guardados"){ renderGuardados(); return; }
+  if (v.tipo === "escapadas"){ renderEscapadas(v); return; }
   if (v.tipo === "proximos"){
     document.getElementById("date").textContent = v.fecha + (v.actualizado ? ` · revisado el ${v.actualizado}` : "");
     renderProximos(v); return;

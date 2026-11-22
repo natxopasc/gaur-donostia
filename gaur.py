@@ -299,6 +299,32 @@ def main():
         "eventos": [{k: x for k, x in e.items() if k != "i"} for e in v["eventos"]],
     } for v in vistas]
 
+    # Pestaña «Escapadas»: Bilbao, Vitoria, Pamplona y Biarritz (escapadas.py, semanal).
+    ruta_esc = os.path.join(CARPETA, "escapadas.json")
+    if os.path.exists(ruta_esc):
+        with open(ruta_esc, encoding="utf-8") as f:
+            esc = json.load(f)
+        hoy_txt = hoy.isoformat()
+
+        def vivos(lista):
+            out = []
+            for e in lista:
+                if (e.get("fin") or e["fecha"]) >= hoy_txt:
+                    e = dict(e)
+                    e["fecha"] = max(e["fecha"], hoy_txt)  # lo que ya empezó, desde hoy
+                    out.append(e)
+            return sorted(out, key=lambda x: (x["fecha"], x.get("hora") or "99"))
+
+        datos.append({
+            "k": "escapadas", "tab": "Escapadas", "tipo": "escapadas",
+            "fecha": "Bilbao, Vitoria, Pamplona y Biarritz · próximas semanas",
+            "actualizado": esc.get("actualizado", ""),
+            "destacados": vivos(esc.get("picks", [])),
+            "lista": vivos(esc.get("eventos", [])),
+            "picks": [], "eventos": [],
+        })
+        print(f"   Escapadas: {len(datos[-1]['destacados'])} destacados, {len(datos[-1]['lista'])} planes")
+
     # Pestaña «Próximos»: la rellena cada semana la tarea de proximos.py.
     ruta_proximos = os.path.join(CARPETA, "proximos.json")
     if os.path.exists(ruta_proximos):
