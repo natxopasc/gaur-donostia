@@ -1,10 +1,10 @@
 {
- "actualizado": "22/11/2026",
- "desde": "2026-11-22",
- "hasta": "2026-12-20",
+ "actualizado": "23/11/2026",
+ "desde": "2026-11-23",
+ "hasta": "2026-12-21",
  "picks": [
   {
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "fin": "2026-11-30",
    "hora": "19:00 + 19:30",
    "titulo": "ABAO: «Il barbiere di Siviglia»",
@@ -85,6 +85,7 @@
    "ciudad": "Biarritz",
    "precio": "39,50 / 65 €",
    "url": "https://www.jds.fr/bayonne/spectacles/theatre/le-bourgeois-gentilhomme-avec-jean-paul-rouve-1585210_A",
+   "fuente": "web",
    "d": "Molière en la Gare du Midi, con Jean-Paul Rouve como Monsieur Jourdain. Teatro en francés: plan perfecto para una escapada de sábado a Biarritz."
   },
   {
@@ -102,139 +103,18 @@
  ],
  "eventos": [
   {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-22",
-   "hora": "11:00-19:00",
-   "titulo": "TANTAK FEST: el festival de los océanos",
+   "fecha": "2026-11-23",
+   "fin": "2026-11-26",
+   "hora": "17:30-20:00",
+   "titulo": "Semana de Cine Italiano 2026 en Vitoria-Gasteiz",
    "tipo": "Festival",
-   "lugar": "Itsasmuseum Bilbao - Museo Marítimo Vasco",
-   "ciudad": "Bilbao",
-   "precio": "GRATIS",
-   "url": "https://www.tantakfest.eu/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "12:00",
-   "titulo": "Banda Municipal de Música de Bilbao 2026/27: \"Caminos\"",
-   "tipo": "Música",
-   "lugar": "Palacio Euskalduna",
-   "ciudad": "Bilbao",
-   "precio": "5 / 6,5 €",
-   "url": "https://www.euskalduna.eus/es/detalle/BANDA26272@Janto_KB/PAEU1"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "12:30",
-   "titulo": "Bilbao TX Fest 2026: \"EL ABRAZO\"",
-   "tipo": "Teatro",
-   "lugar": "Sede de la Compañía Joven Pabellón 6",
-   "ciudad": "Bilbao",
-   "precio": "10 €",
-   "url": "https://pabellon6.org/event/el-abrazo/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "16:30 + 18:00",
-   "titulo": "\"Univers\"",
-   "tipo": "Teatro",
-   "lugar": "Teatro Barakaldo",
-   "ciudad": "Bilbao",
-   "precio": "6€",
-   "url": "https://www.teatrobarakaldo.com/event/universengruna-teatre/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "17:00",
-   "titulo": "\"No me toques el cuento\"",
-   "tipo": "Teatro",
-   "lugar": "Teatro Campos Elíseos",
-   "ciudad": "Bilbao",
-   "precio": "23 €",
-   "url": "https://entradas.teatrocampos.com/espectaculo/no-me-toques-el-cuento/CUENTON26?_ga=2.138279538.319655769.1783074801-738930630.1783074801"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "17:00 - 19:00",
-   "titulo": "\"Begiekin ikusten gara\"",
-   "tipo": "Teatro",
-   "lugar": "Samaniego Ikastetxea",
+   "lugar": "Facultad de Letras EHU (Aula Magna y Salón de Grados)",
    "ciudad": "Vitoria",
-   "precio": "",
-   "url": "https://geuelkartea.eus/ekitaldia/igandeak-jai-begiekin-ikusten-gara/"
+   "precio": "Gratis",
+   "url": "https://www.ehu.eus/es/web/letren-fakultatea/-/ii-settimana-del-cinema-italiano"
   },
   {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-22",
-   "hora": "17:00 - 21:00",
-   "titulo": "BIDEOTIKAN 2026 - FESTIVAL INTERNACIONAL DE ARTE DIGITAL",
-   "tipo": "Festival",
-   "lugar": "AZ Azkuna Zentroa",
-   "ciudad": "Bilbao",
-   "precio": "",
-   "url": "https://www.azkunazentroa.eus/es/actividad/bideotikan-festival-internacional-de-arte-digital/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "17:30",
-   "titulo": "Iñaki Urrutia: \"Perdone caballero\"",
-   "tipo": "Teatro",
-   "lugar": "Teatro Campos Elíseos",
-   "ciudad": "Bilbao",
-   "precio": "20€",
-   "url": "https://entradas.teatrocampos.com/espectaculo/perdone-caballero/URRUTIA26"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "18:00",
-   "titulo": "Bilbao TX Fest 2026: \"Los cuentos de Sibyla\"",
-   "tipo": "Teatro",
-   "lugar": "La Fundición",
-   "ciudad": "Bilbao",
-   "precio": "10 €",
-   "url": "https://ticket.kutxabank.es/janto/main.php?Nivel=Recinto&idRecinto=FU"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "18:00-19:00",
-   "titulo": "Festival Internacional de Teatro de Vitoria-Gasteiz 2026: \"Mini Break\"",
-   "tipo": "Danza",
-   "lugar": "Félix Petite Antzokia",
-   "ciudad": "Vitoria",
-   "precio": "6 €",
-   "url": "https://www.vitoria-gasteiz.org/wb021/was/contenidoAction.do?idioma=es&uid=u_4b11fed_19f63f5e2f5__2f70"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-22",
-   "hora": "19:00",
-   "titulo": "\"LA FÉ\"",
-   "tipo": "Teatro",
-   "lugar": "Escuela Navarra de Teatro",
-   "ciudad": "Pamplona",
-   "precio": "14€",
-   "url": "https://es.patronbase.com/_LaEscueladeTeatro/Productions/C119/Performances"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "\"MONÓLOGO GORKA AGUINAGALDE Y ANDONI AGIRREGOMEZKORTA\"",
-   "tipo": "Teatro",
-   "lugar": "Teatro Gayarre",
-   "ciudad": "Pamplona",
-   "precio": "22€/20€",
-   "url": "https://es.patronbase.com/_GayarreEu/Sections/Choose?prod_id=16M&perf_id=1"
-  },
-  {
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "fin": "2026-11-26",
    "hora": "19:00",
    "titulo": "Ciclo \"Ellas hacen ciencia\" 2026",
@@ -245,51 +125,7 @@
    "url": "https://www.bilbao.eus/cs/Satellite?c=BIO_Noticia_FA&cid=1279244630217&language=es&pageid=3000075248&pagename=Bilbaonet/BIO_Noticia_FA/BIO_Noticia"
   },
   {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "Ciclo IAKantuan 2026: Nomaziak Abesbatza",
-   "tipo": "Música",
-   "lugar": "Centro Cultural Izaskun Arrue – Gasteiz Antzokia",
-   "ciudad": "Vitoria",
-   "precio": "5 €",
-   "url": "https://sarrerak.iak.eus/web/?menu=1162&pagina=entradas&item=62939&siteID=lazarraga"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "Ciclo de Teatro de Txantrea 2026: \"Iruña 2.0\"",
-   "tipo": "Teatro",
-   "lugar": "Cuenca de Pamplona 24, Centro Comunitario Txantrea",
-   "ciudad": "Pamplona",
-   "precio": "Gratis",
-   "url": "https://www.instagram.com/p/DdhQ207gpL_/?stkn=ODduaXUyeGQwZ2xt"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "Coral Barañain Abesbatza + San Fermín Abesbatza: \"Vamos a Echarle Pichón por Venezuela\"",
-   "tipo": "Música",
-   "lugar": "Auditorio Barañáin",
-   "ciudad": "Pamplona",
-   "precio": "7€",
-   "url": "https://es.patronbase.com/_AuditorioBaranain/Productions/2641/Performances"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "L.A. GUNS + STICKS N STONES",
-   "tipo": "Música",
-   "lugar": "Bilboko Kafe Antzokia",
-   "ciudad": "Bilbao",
-   "precio": "36 / 42 €",
-   "url": "https://feverup.com/m/519696"
-  },
-  {
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "fin": "2026-11-27",
    "hora": "19:00",
    "titulo": "Mila Musika Haria 2026",
@@ -298,193 +134,6 @@
    "ciudad": "Bilbao",
    "precio": "5 €",
    "url": "https://milamusikaharia.vivetix.com/es/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00",
-   "titulo": "Revólver",
-   "tipo": "Música",
-   "lugar": "Auditorio Baluarte",
-   "ciudad": "Pamplona",
-   "precio": "36 / 50 €",
-   "url": "https://entradasbaluarte.nicdo.es/selection/event/date?productId=10229729213970"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-30",
-   "hora": "19:00 + 19:30",
-   "titulo": "ABAO Bilbao Opera: \"Il barbiere di Siviglia\"",
-   "tipo": "Teatro",
-   "lugar": "Palacio Euskalduna",
-   "ciudad": "Bilbao",
-   "precio": "29 / 300 €",
-   "url": "https://abao.shop.secutix.com/selection/event/date?productId=10229397194044"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00 - 20:00",
-   "titulo": "Klaustro Sounds 26: Oriol Pares & Jaime De Los Ríos \"TIME\"",
-   "tipo": "Música",
-   "lugar": "Centro Cultural Montehermoso",
-   "ciudad": "Vitoria",
-   "precio": "5 €",
-   "url": "https://entradium.com/events/klaustro-sounds-26-oriol-pares-jaime-de-los-rios"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:00 - 20:20",
-   "titulo": "Auzo Eszena 2026 (otoño): \"136 escalones\"",
-   "tipo": "Teatro",
-   "lugar": "Centro Cívico Arriaga - Salón de actos",
-   "ciudad": "Vitoria",
-   "precio": "7 €",
-   "url": "https://sedeelectronica.vitoria-gasteiz.org/m01-08s/ventaEntrada/showEspectaculo/1857"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:30",
-   "titulo": "\"Hace calor y somos nosotres\"",
-   "tipo": "Teatro",
-   "lugar": "Casa de Cultura de Villava",
-   "ciudad": "Pamplona",
-   "precio": "6€",
-   "url": "http://www.villava.es/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:30",
-   "titulo": "Ciclo Organo Kontzertuak 2026: \"Etorkizuneko talentua. Max Reger erronka. Musikene\"",
-   "tipo": "Música",
-   "lugar": "Palacio Euskalduna",
-   "ciudad": "Bilbao",
-   "precio": "18,50 €",
-   "url": "https://www.euskalduna.eus/es/detalle/ORGANO262@Janto_KB/PAEU1"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:30",
-   "titulo": "FLOTSAM AND JETSAM",
-   "tipo": "Música",
-   "lugar": "Urban Rock Concept",
-   "ciudad": "Vitoria",
-   "precio": "22 € + gastos",
-   "url": "https://woutick.com/es/entradas/flotsam-and-jetsam-blast-open-en-vitoria/comprar/2fa71972-6538-4069-8c28-a2b54c086a12?"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:30",
-   "titulo": "Vanessa Collier feat. Travellin' Brothers",
-   "tipo": "Música",
-   "lugar": "Nave 9",
-   "ciudad": "Bilbao",
-   "precio": "8 / 10 €",
-   "url": "https://www.instagram.com/p/De7nNErxYzI/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "19:45",
-   "titulo": "\"El show de Ignatius\" (Jimmy Jazz Gasteiz)",
-   "tipo": "Teatro",
-   "lugar": "Sala Jimmy Jazz",
-   "ciudad": "Vitoria",
-   "precio": "20 / 25 €",
-   "url": "https://entradas.vitaminproducciones.com/web/?menu=1162&pagina=entradas&item=62309&siteID=vitamin"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "20:00",
-   "titulo": "Muestra de Teatro de Aquí 2026: \"LA GOLONDRINA\"",
-   "tipo": "Teatro",
-   "lugar": "Civivox Pompelo",
-   "ciudad": "Pamplona",
-   "precio": "Gratis (inscripción)",
-   "url": "https://www.pamplonaescultura.es/inscripciones-cursos-y-activades-civivox/?redirect=bookings/booking-view/session/15220528/unlogged"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "",
-   "hora": "21:00",
-   "titulo": "Abián Díaz: \"Show patético\"",
-   "tipo": "Teatro",
-   "lugar": "Teatro Campos Elíseos",
-   "ciudad": "Bilbao",
-   "precio": "21 €",
-   "url": "https://entradas.teatrocampos.com/espectaculo/show-patetico/ABIAND26?_ga=2.25527869.140044582.1783074675-1674833159.1783074675"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-22",
-   "hora": "30 octubre: 1",
-   "titulo": "\"Bizipoza\"",
-   "tipo": "Teatro",
-   "lugar": "Sede de la Compañía Joven Pabellón 6",
-   "ciudad": "Bilbao",
-   "precio": "17 €",
-   "url": "https://pabellon6.org/event/bizipoza/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-29",
-   "hora": "",
-   "titulo": "#CivivoxInTheMapping 2026",
-   "tipo": "Festival",
-   "lugar": "Civivox Mendillorri",
-   "ciudad": "Pamplona",
-   "precio": "",
-   "url": "https://www.pamplona.es/sites/default/files/2026-09/civivox-octubre-enero-infantil-2026.pdf"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-12-12",
-   "hora": "",
-   "titulo": "Gure Zirkua 2026 (Gasteiz)",
-   "tipo": "Teatro",
-   "lugar": "Paseo de la Música",
-   "ciudad": "Vitoria",
-   "precio": "15 €",
-   "url": "https://www.gurezirkua.eus/producto/gasteiz/"
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-27",
-   "hora": "",
-   "titulo": "IZAKI GARDENAK (Conciertos fin de gira)",
-   "tipo": "Música",
-   "lugar": "Bilbo, Donostia, Villava, Berriz eta",
-   "ciudad": "Vitoria",
-   "precio": "",
-   "url": ""
-  },
-  {
-   "fecha": "2026-11-22",
-   "fin": "2026-11-26",
-   "hora": "",
-   "titulo": "La Risa Lista 2026",
-   "tipo": "Festival",
-   "lugar": "Civivox Pompelo",
-   "ciudad": "Pamplona",
-   "precio": "",
-   "url": "https://www.pamplonaescultura.es/eventos/la-risa-lista-2026-el-arte-de-entretener-durante-40-putos-minutos-lu-antimorbo/"
-  },
-  {
-   "fecha": "2026-11-23",
-   "fin": "2026-11-26",
-   "hora": "17:30-20:00",
-   "titulo": "Semana de Cine Italiano 2026 en Vitoria-Gasteiz",
-   "tipo": "Festival",
-   "lugar": "Facultad de Letras EHU (Aula Magna y Salón de Grados)",
-   "ciudad": "Vitoria",
-   "precio": "Gratis",
-   "url": "https://www.ehu.eus/es/web/letren-fakultatea/-/ii-settimana-del-cinema-italiano"
   },
   {
    "fecha": "2026-11-23",
@@ -499,6 +148,17 @@
   },
   {
    "fecha": "2026-11-23",
+   "fin": "2026-11-30",
+   "hora": "19:00 + 19:30",
+   "titulo": "ABAO Bilbao Opera: \"Il barbiere di Siviglia\"",
+   "tipo": "Teatro",
+   "lugar": "Palacio Euskalduna",
+   "ciudad": "Bilbao",
+   "precio": "29 / 300 €",
+   "url": "https://abao.shop.secutix.com/selection/event/date?productId=10229397194044"
+  },
+  {
+   "fecha": "2026-11-23",
    "fin": "",
    "hora": "19:30 - 20:45",
    "titulo": "Euskadiko Orkestra 2026/27: \"Falla / Debussy / Stravinsky\" (Vitoria-Gasteiz)",
@@ -507,6 +167,50 @@
    "ciudad": "Vitoria",
    "precio": "Sin venta",
    "url": "https://www.vitoria-gasteiz.org/wb021/was/contenidoAction.do?idioma=es&uid=u_48bdc1a8_19f36b236ee__717e"
+  },
+  {
+   "fecha": "2026-11-23",
+   "fin": "2026-11-29",
+   "hora": "",
+   "titulo": "#CivivoxInTheMapping 2026",
+   "tipo": "Festival",
+   "lugar": "Civivox Mendillorri",
+   "ciudad": "Pamplona",
+   "precio": "",
+   "url": "https://www.pamplona.es/sites/default/files/2026-09/civivox-octubre-enero-infantil-2026.pdf"
+  },
+  {
+   "fecha": "2026-11-23",
+   "fin": "2026-12-12",
+   "hora": "",
+   "titulo": "Gure Zirkua 2026 (Gasteiz)",
+   "tipo": "Teatro",
+   "lugar": "Paseo de la Música",
+   "ciudad": "Vitoria",
+   "precio": "15 €",
+   "url": "https://www.gurezirkua.eus/producto/gasteiz/"
+  },
+  {
+   "fecha": "2026-11-23",
+   "fin": "2026-11-27",
+   "hora": "",
+   "titulo": "IZAKI GARDENAK (Conciertos fin de gira)",
+   "tipo": "Música",
+   "lugar": "Bilbo, Donostia, Villava, Berriz eta",
+   "ciudad": "Vitoria",
+   "precio": "",
+   "url": ""
+  },
+  {
+   "fecha": "2026-11-23",
+   "fin": "2026-11-26",
+   "hora": "",
+   "titulo": "La Risa Lista 2026",
+   "tipo": "Festival",
+   "lugar": "Civivox Pompelo",
+   "ciudad": "Pamplona",
+   "precio": "",
+   "url": "https://www.pamplonaescultura.es/eventos/la-risa-lista-2026-el-arte-de-entretener-durante-40-putos-minutos-lu-antimorbo/"
   },
   {
    "fecha": "2026-11-24",
@@ -4033,6 +3737,50 @@
    "ciudad": "Pamplona",
    "precio": "45 / 68 €",
    "url": "https://baluarte.com/es/agenda/evento/sara-baras-infinita-20-diciembre-2026"
+  },
+  {
+   "fecha": "2026-12-21",
+   "fin": "",
+   "hora": "18:30",
+   "titulo": "Dantza Plazetan 2026: Ondalan Erraldoien Konpartsa",
+   "tipo": "Danza",
+   "lugar": "Plaza Levante (San Ignacio)",
+   "ciudad": "Bilbao",
+   "precio": "Gratis",
+   "url": "https://www.bilbao.eus/cs/Satellite?c=BIO_Noticia_FA&cid=1279245985094&language=es&pageid=3000075248&pagename=Bilbaonet%2FBIO_Noticia_FA%2FBIO_Noticia"
+  },
+  {
+   "fecha": "2026-12-21",
+   "fin": "",
+   "hora": "19:00",
+   "titulo": "Ballet Clásico Internacional: \"El lago de los cisnes\"",
+   "tipo": "Danza",
+   "lugar": "Auditorio Baluarte",
+   "ciudad": "Pamplona",
+   "precio": "18,95 / 39,95 €",
+   "url": "https://entradasbaluarte.nicdo.es/selection/event/date?productId=10229834845926&_gl=1*1rwecgn*_ga*MTM3MzgxODk0Ni4xNzQ3MjUxNTYw*_ga_J1V9K0RJ5W*czE3ODExMDQzNTMkbzEzJGcxJHQxNzgxMTA0NDY5JGo2MCRsMCRoMA.."
+  },
+  {
+   "fecha": "2026-12-21",
+   "fin": "",
+   "hora": "19:00",
+   "titulo": "Bilbao Musika",
+   "tipo": "Danza",
+   "lugar": "Bilborock",
+   "ciudad": "Bilbao",
+   "precio": "Gratis",
+   "url": "https://bilbaogazte.bilbao.eus/bilborock/bilborock-en-agenda/"
+  },
+  {
+   "fecha": "2026-12-21",
+   "fin": "",
+   "hora": "19:30-20:30",
+   "titulo": "Música en la calle 2026: Coros: Izartza, Ametsak y Vicente García",
+   "tipo": "Música",
+   "lugar": "Plaza de los Celedones de Oro",
+   "ciudad": "Vitoria",
+   "precio": "Gratis",
+   "url": "https://www.vitoria-gasteiz.org/wb021/was/contenidoAction.do?idioma=es&uid=u_69dca485_1a1c40be74a__344c"
   }
  ]
 }

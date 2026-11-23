@@ -1,7 +1,18 @@
 {
- "actualizado": "22/11/2026",
+ "actualizado": "23/11/2026",
  "hasta_txt": "el verano de 2027",
  "para_ti": [
+  {
+   "fecha": "2026-12-05",
+   "fin": "",
+   "titulo": "Rebrote",
+   "lugar": "Sala Totem",
+   "ciudad": "Villava/Atarrabia",
+   "zona": "Pamplona",
+   "precio": "27,50 €",
+   "url": "https://www.eventim-light.com/es/a/697a4edb8d43dc32656955ef/e/6a3b932ce914c9cb24e6e0e5",
+   "d": "Nuevo grupo surgido de Uoho, de gira por salas este invierno."
+  },
   {
    "fecha": "2027-02-05",
    "fin": "",
@@ -12,6 +23,17 @@
    "precio": "32 €",
    "url": "https://sarrerak.bbk.eus/es/espectaculo/albert-pla-(sirimiri)/albertpla050227?_gl=1*1e4as8r*_ga*OTA4ODYxMjkwLjE3ODc2NTQ1MTY.*_ga_N43YD5E9BX*czE3OTQ5ODkwMDEkbzExJGcxJHQxNzk0OTg5MDE0JGo0NyRsMCRoMA..",
    "d": "Albert Pla en directo, dentro del ciclo Sirimiri de la Sala BBK."
+  },
+  {
+   "fecha": "2027-02-13",
+   "fin": "",
+   "titulo": "Morgan: fin de gira «Hotel Morgan»",
+   "lugar": "Teatro Arriaga",
+   "ciudad": "Bilbao",
+   "zona": "Bizkaia",
+   "precio": "22 / 42 €",
+   "url": "https://www.teatroarriaga.eus/programacion/morgan-2/",
+   "d": "Dentro del Negufest, cierre de la gira de su cuarto disco en el Teatro Arriaga."
   },
   {
    "fecha": "2027-02-19",
@@ -72,6 +94,28 @@
  ],
  "grandes": [
   {
+   "fecha": "2026-11-28",
+   "fin": "",
+   "titulo": "Hombres G",
+   "lugar": "Navarra Arena",
+   "ciudad": "Pamplona/Iruña",
+   "zona": "Pamplona",
+   "precio": "",
+   "url": "https://www.ticketmaster.es/event/hombres-g-los-mejores-anos-de-nuestra-vida-entradas/1774283189",
+   "d": ""
+  },
+  {
+   "fecha": "2026-11-28",
+   "fin": "",
+   "titulo": "Jorge Drexler",
+   "lugar": "Palacio Euskalduna",
+   "ciudad": "Bilbao",
+   "zona": "Bizkaia",
+   "precio": "41 / 77 €",
+   "url": "https://www.euskalduna.eus/es/detalle/DREXLER26@Janto_KB/PAEU1",
+   "d": ""
+  },
+  {
    "fecha": "2026-12-03",
    "fin": "",
    "titulo": "Carlos Vives",
@@ -113,6 +157,17 @@
    "zona": "Pamplona",
    "precio": "43 / 48 €",
    "url": "https://entradasnavarrarena.nicdo.es/selection/event/date?productId=10229841870171&_gl=1*v1xvrp*_ga*MTA4MDEwNTUyNS4xNzY0MTUwNjUy*_ga_V4Q0MW57Y3*czE3ODExNzE3NjMkbzUkZzEkdDE3ODExNzE3NjQkajU5JGwwJGgxMTUz",
+   "d": ""
+  },
+  {
+   "fecha": "2026-12-12",
+   "fin": "",
+   "titulo": "Sergio Dalma",
+   "lugar": "Bilbao Arena - Miribilla",
+   "ciudad": "Bilbao",
+   "zona": "Bizkaia",
+   "precio": "50 / 72 €",
+   "url": "https://tickets.oneboxtds.com/girasergiodalma/select/2641082?viewCode=Contenedor_base",
    "d": ""
   },
   {
@@ -282,6 +337,17 @@
    "d": ""
   },
   {
+   "fecha": "2027-05-02",
+   "fin": "",
+   "titulo": "Eros Ramazzotti",
+   "lugar": "Navarra Arena",
+   "ciudad": "Pamplona/Iruña",
+   "zona": "Pamplona",
+   "precio": "",
+   "url": "https://www.navarrarena.com/en/agenda/2027-05-02/eros-ramazzotti",
+   "d": ""
+  },
+  {
    "fecha": "2027-05-05",
    "fin": "",
    "titulo": "Scorpions",
@@ -303,6 +369,17 @@
    "url": "https://sarrerak.batbatean.eus/web/?menu=36&pagina=&siteID=batbatean",
    "d": "",
    "tag": "festival"
+  },
+  {
+   "fecha": "2027-05-07",
+   "fin": "",
+   "titulo": "Benjamin Clementine: «Back to Basics»",
+   "lugar": "Teatro Victoria Eugenia",
+   "ciudad": "Donostia / San Sebastián",
+   "zona": "Gipuzkoa",
+   "precio": "32 / 45 €",
+   "url": "https://tickets.donostiakultura.eus/selection/event/date?productId=10230383818498&lang=es",
+   "d": "El británico, premio Mercury, en solitario: solo voz y piano."
   },
   {
    "fecha": "2027-05-21",
