@@ -1,20 +1,68 @@
 {
  "hoy": [
-  {"n": "Broke Carrey", "m": "20:30 · Dabadaba · 15 / 18 €", "d": "Lunes de concierto en Dabadaba, que es justo lo que hace falta para que la semana no empiece en el sofá. Sala pequeña, sonido cuidado y la cerveza a dos pasos del escenario."},
-  {"n": "Corto «ay claridad»: presentación", "m": "18:30 · Tabakalera · Gratis (inscripción)", "d": "Estreno de cortometraje con su equipo delante, en la casa del cine de autor de la ciudad. Gratis, cortito y con conversación después: plan perfecto para salir del trabajo."},
-  {"n": "Literaktum: «Un metro cuadrado»", "m": "19:00 · Librería Zubieta · Gratis", "d": "El festival literario de Donostia se cuela entre estanterías, a escala de librería de barrio. Entrada libre y formato íntimo, de los que permiten preguntar sin micrófono."},
-  {"n": "Tertulia: Leïla Slimani", "m": "19:00 · Biblioteca Central · Gratis", "d": "«J'emporterai le feu» cierra la saga familiar de la premio Goncourt franco-marroquí. Tertulia gratuita en la Biblioteca Central de San Jerónimo: ideal para quien quiera hablar de libros más allá del «me ha gustado»."}
+  {
+   "n": "Las Eras",
+   "m": "20:30 · Dabadaba · 12 / 14 €",
+   "d": "Martes de concierto en Dabadaba, que rara vez programa a ciegas. Entrada a precio de caña larga y la noche aún joven al salir."
+  },
+  {
+   "n": "Katixa Agirre: «Barne zerbitzuak»",
+   "m": "18:30 · Biteri Kultur Etxea (Hernani) · Gratis",
+   "d": "Una de las voces más sólidas de la narrativa vasca actual habla de su novela dentro del ciclo de literatura feminista. Gratis y a un salto de Donostia."
+  },
+  {
+   "n": "Groenlandia: clima, recursos y geopolítica",
+   "m": "18:30 · Kutxa Fundazioa Kluba · Gratis",
+   "d": "El Ártico se ha convertido en tablero geopolítico y esta charla lo cruza con el cambio climático y los recursos. Para entender titulares que vienen, sin pagar un euro."
+  },
+  {
+   "n": "Kresala: «Nuestro héroe, Balthazar»",
+   "m": "19:30 · Cines Trueba · 5 €",
+   "d": "El cineclub Kresala sigue con su sesión de martes en los Trueba. Cine de autor en pantalla grande por cinco euros, el mejor precio de la ciudad."
+  }
  ],
  "manana": [
-  {"n": "Las Eras", "m": "20:30 · Dabadaba · 12 / 14 €", "d": "Martes con directo en Dabadaba a precio de entre semana. Sala de las que hacen que cualquier banda suene a noche importante."},
-  {"n": "Kresala: «Nuestro héroe, Balthazar»", "m": "19:30 · Cines Trueba · 5 €", "d": "El cineclub Kresala sigue con su sesión de martes en los Trueba, cine en versión original de la que no llega a las multisalas. Cinco euros: más barato que el café de después."},
-  {"n": "Groenlandia: clima y geopolítica", "m": "18:30 · Kutxa Fundazioa Kluba · Gratis", "d": "Charla (en euskera) sobre cambio climático, recursos y la pelea por el Ártico, el tema que no deja de salir en los telediarios. Gratis y en hora y media, sales sabiendo más que tu cuñado."},
-  {"n": "Katixa Agirre: «Barne zerbitzuak»", "m": "18:30 · Biteri Kultur Etxea (Hernani) · Gratis", "d": "Una de las voces fuertes de la literatura vasca actual, dentro del ciclo Literatura feminismotik. Encuentro gratuito en Hernani, a un salto de Donostia."}
+  {
+   "n": "Joel Sarakula",
+   "m": "20:30 · Dabadaba · 14 / 18 €",
+   "d": "Pop setentero de terciopelo, entre soft rock y soul, del australiano afincado en Londres. Un miércoles con groove en la sala de Egia."
+  },
+  {
+   "n": "Jam Session con Musikene",
+   "m": "20:00 · Altxerri Jazz Club · Gratis",
+   "d": "Los alumnos de Musikene se suben al escenario del Altxerri a improvisar. Gratis, sin red y con la sorpresa garantizada."
+  },
+  {
+   "n": "Nosferatu: «¿Qué ocurrió entre mi padre y tu madre?»",
+   "m": "19:00 · Tabakalera · 4,50 €",
+   "d": "Es «Avanti!», la comedia romántica de Billy Wilder con Jack Lemmon, en el ciclo Nosferatu de Tabakalera. Wilder en pantalla grande por menos que un pintxo y un txakoli."
+  },
+  {
+   "n": "Taller «Atlas_abcdefghijklmnopqrstuvwxyz»",
+   "m": "18:00 · Tabakalera · Gratis (inscripción)",
+   "d": "Sesión práctica en Tabakalera para quien prefiere hacer a mirar. Gratis, pero conviene apuntarse antes."
+  }
  ],
  "finde": [
-  {"n": "Donostia Bertsotan: Lujanbio, Ibarzabal, Arzallus, Mendiluze", "m": "Vie 27 · 19:30 · Lugaritz · 5 €", "d": "Cartel de primerísima: Maialen Lujanbio, campeona de Euskal Herria, con Nerea Ibarzabal, Amets Arzallus y Aitor Mendiluze. Improvisación en verso al máximo nivel por cinco euros: no hay mejor relación calidad-precio en todo el finde."},
-  {"n": "Maika Makovski", "m": "Vie 27 · 20:30 · Dabadaba · 21 / 25 €", "d": "La mallorquina se mueve con soltura entre el rock áspero y la canción de autor, y en directo es pura intensidad. En una sala del tamaño de Dabadaba, la tendrás casi al alcance de la mano."},
-  {"n": "Véronique Gens + Les Surprises", "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €", "d": "Véronique Gens es una de las grandes sopranos francesas del repertorio barroco, aquí con el conjunto Les Surprises e instrumentos de época. Hay entradas desde 11 €, así que no hay excusa para no probar."},
-  {"n": "«Este himno llevará la palabra euforia»", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea en Gazteszena para cerrar el domingo con algo distinto al sofá y la serie. Con ese título, se promete subidón; por 10 €, el riesgo es mínimo."}
+  {
+   "n": "Donostia Bertsotan: Lujanbio, Arzallus, Ibarzabal, Mendiluze",
+   "m": "Vie 27 · 19:30 · Lugaritz · 5 €",
+   "d": "Cartel de primera división: Maialen Lujanbio y Amets Arzallus, campeones del Bertsolari Txapelketa, con Nerea Ibarzabal y Aitor Mendiluze. Improvisación en directo por cinco euros: imprescindible si entiendes euskera."
+  },
+  {
+   "n": "Les Surprises + Véronique Gens",
+   "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €",
+   "d": "La soprano francesa Véronique Gens, referencia del repertorio barroco y francés, con el ensemble Les Surprises. Lujo de temporada con entradas desde 11 €."
+  },
+  {
+   "n": "Papillon zikloa: «Timbuktu»",
+   "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · Gratis (con invitación)",
+   "d": "La película de Abderrahmane Sissako sobre la vida bajo el yihadismo en Mali, bella y durísima a la vez. Gratis con invitación: plan perfecto de domingo tarde en Hondarribia."
+  },
+  {
+   "n": "Beavers",
+   "m": "Dom 29 · 20:00 · Altxerri Jazz Club · 5 €",
+   "d": "Cerrar el finde en el sótano jazzístico del Boulevard. Cinco euros y directo de cerca, como debe ser un domingo."
+  }
  ]
 }
