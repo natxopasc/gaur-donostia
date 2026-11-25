@@ -1,68 +1,20 @@
 {
- "hoy": [
-  {
-   "n": "Las Eras",
-   "m": "20:30 · Dabadaba · 12 / 14 €",
-   "d": "Martes de concierto en Dabadaba, que rara vez programa a ciegas. Entrada a precio de caña larga y la noche aún joven al salir."
-  },
-  {
-   "n": "Katixa Agirre: «Barne zerbitzuak»",
-   "m": "18:30 · Biteri Kultur Etxea (Hernani) · Gratis",
-   "d": "Una de las voces más sólidas de la narrativa vasca actual habla de su novela dentro del ciclo de literatura feminista. Gratis y a un salto de Donostia."
-  },
-  {
-   "n": "Groenlandia: clima, recursos y geopolítica",
-   "m": "18:30 · Kutxa Fundazioa Kluba · Gratis",
-   "d": "El Ártico se ha convertido en tablero geopolítico y esta charla lo cruza con el cambio climático y los recursos. Para entender titulares que vienen, sin pagar un euro."
-  },
-  {
-   "n": "Kresala: «Nuestro héroe, Balthazar»",
-   "m": "19:30 · Cines Trueba · 5 €",
-   "d": "El cineclub Kresala sigue con su sesión de martes en los Trueba. Cine de autor en pantalla grande por cinco euros, el mejor precio de la ciudad."
-  }
- ],
- "manana": [
-  {
-   "n": "Joel Sarakula",
-   "m": "20:30 · Dabadaba · 14 / 18 €",
-   "d": "Pop setentero de terciopelo, entre soft rock y soul, del australiano afincado en Londres. Un miércoles con groove en la sala de Egia."
-  },
-  {
-   "n": "Jam Session con Musikene",
-   "m": "20:00 · Altxerri Jazz Club · Gratis",
-   "d": "Los alumnos de Musikene se suben al escenario del Altxerri a improvisar. Gratis, sin red y con la sorpresa garantizada."
-  },
-  {
-   "n": "Nosferatu: «¿Qué ocurrió entre mi padre y tu madre?»",
-   "m": "19:00 · Tabakalera · 4,50 €",
-   "d": "Es «Avanti!», la comedia romántica de Billy Wilder con Jack Lemmon, en el ciclo Nosferatu de Tabakalera. Wilder en pantalla grande por menos que un pintxo y un txakoli."
-  },
-  {
-   "n": "Taller «Atlas_abcdefghijklmnopqrstuvwxyz»",
-   "m": "18:00 · Tabakalera · Gratis (inscripción)",
-   "d": "Sesión práctica en Tabakalera para quien prefiere hacer a mirar. Gratis, pero conviene apuntarse antes."
-  }
- ],
- "finde": [
-  {
-   "n": "Donostia Bertsotan: Lujanbio, Arzallus, Ibarzabal, Mendiluze",
-   "m": "Vie 27 · 19:30 · Lugaritz · 5 €",
-   "d": "Cartel de primera división: Maialen Lujanbio y Amets Arzallus, campeones del Bertsolari Txapelketa, con Nerea Ibarzabal y Aitor Mendiluze. Improvisación en directo por cinco euros: imprescindible si entiendes euskera."
-  },
-  {
-   "n": "Les Surprises + Véronique Gens",
-   "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €",
-   "d": "La soprano francesa Véronique Gens, referencia del repertorio barroco y francés, con el ensemble Les Surprises. Lujo de temporada con entradas desde 11 €."
-  },
-  {
-   "n": "Papillon zikloa: «Timbuktu»",
-   "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · Gratis (con invitación)",
-   "d": "La película de Abderrahmane Sissako sobre la vida bajo el yihadismo en Mali, bella y durísima a la vez. Gratis con invitación: plan perfecto de domingo tarde en Hondarribia."
-  },
-  {
-   "n": "Beavers",
-   "m": "Dom 29 · 20:00 · Altxerri Jazz Club · 5 €",
-   "d": "Cerrar el finde en el sótano jazzístico del Boulevard. Cinco euros y directo de cerca, como debe ser un domingo."
-  }
- ]
+  "hoy": [
+    {"n": "Joel Sarakula", "m": "20:30 · Dabadaba · 14 / 18 €", "d": "El australiano afincado en Londres trae su pop setentero de camisa abierta y estribillos soleados, ideal para olvidar que es miércoles de noviembre. Dabadaba en formato cercano: se baila más de lo que parece."},
+    {"n": "Jam session con Musikene", "m": "20:00 · Altxerri Jazz Club · Gratis", "d": "Los alumnos del conservatorio superior se suben al escenario del Altxerri y la cosa se improvisa sobre la marcha. Gratis, en un sótano con solera y con la posibilidad de pillar a alguien antes de que sea famoso."},
+    {"n": "Nosferatu: «¿Qué ocurrió entre mi padre y tu madre?»", "m": "19:00 · Tabakalera · 4,50 €", "d": "Billy Wilder en modo comedia romántica italiana, dentro del ciclo Nosferatu en pantalla grande. Por 4,50 € no hay mejor plan de sofá fuera del sofá."},
+    {"n": "Visita guiada: Mauricio Antón", "m": "18:00 · Museo San Telmo · Reserva", "d": "Recorrido por la muestra del paleoartista que lleva décadas devolviendo la piel y el músculo a tigres de dientes de sable y otros bichos extintos. Arte y ciencia de la mano, con alguien que te cuenta lo que no pone en las cartelas."}
+  ],
+  "manana": [
+    {"n": "Euskadiko Orkestra: Falla / Debussy / Stravinsky", "m": "19:30 · Kursaal · 10 / 41 €", "d": "Programa de colores fuertes: el sur de Falla, la bruma de Debussy y la sacudida de Stravinsky en la misma noche. Con entradas desde 10 €, excusa perfecta para estrenarse con la orquesta."},
+    {"n": "«Popera», de Janus Lester", "m": "20:00 · Teatro Principal · 8 €", "d": "Estreno de un film musical en el Antzoki Zaharra, un formato que no se ve todos los días en cartelera. Plan curioso de jueves por el precio de una caña y media."},
+    {"n": "Documental: «Gaza: Doctors Under Attack»", "m": "18:30 · Casares-Tomasene · Gratis", "d": "Proyección gratuita en Altza de un documental sobre los sanitarios en la Franja. No es un plan ligero, pero sí de los que te dejan pensando el resto de la semana."},
+    {"n": "«43º13'44''N»", "m": "19:30 · Kutxa Fundazioa Kluba · 10 / 12 €", "d": "Teatro de sala pequeña con título de coordenadas, en el espacio de Kutxa en Tabakalera. Formato cercano y precio contenido para quien quiere algo distinto a la gran producción."}
+  ],
+  "finde": [
+    {"n": "Donostia Bertsotan: Lujanbio, Ibarzabal, Arzallus, Mendiluze", "m": "Vie 27 · 19:30 · Lugaritz · 5 €", "d": "Cartel de primera división del bertsolarismo, con Maialen Lujanbio y Amets Arzallus, ambos campeones de Euskal Herria. Por 5 € es probablemente el mejor precio/calidad del fin de semana."},
+    {"n": "Maika Makovski", "m": "Vie 27 · 20:30 · Dabadaba · 21 / 25 €", "d": "La mallorquina pasa del rock afilado a la canción de autor sin despeinarse y en directo tiene carácter de sobra. Dabadaba es la sala perfecta para verla de cerca."},
+    {"n": "Les Surprises + Véronique Gens", "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €", "d": "Una de las grandes sopranos francesas del repertorio barroco junto a un ensemble especializado en ese mismo terreno. Hay entradas desde 11 €, así que no vale la excusa de que la ópera es cara."},
+    {"n": "«Este himno llevará la palabra euforia»", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea en Egia para cerrar el domingo con algo más que la tele. El título promete y la entrada a 10 € deja margen para un pintxo después."}
+  ]
 }
