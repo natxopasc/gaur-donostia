@@ -1,20 +1,20 @@
 {
-  "hoy": [
-    {"n": "Joel Sarakula", "m": "20:30 · Dabadaba · 14 / 18 €", "d": "El australiano afincado en Londres trae su pop setentero de camisa abierta y estribillos soleados, ideal para olvidar que es miércoles de noviembre. Dabadaba en formato cercano: se baila más de lo que parece."},
-    {"n": "Jam session con Musikene", "m": "20:00 · Altxerri Jazz Club · Gratis", "d": "Los alumnos del conservatorio superior se suben al escenario del Altxerri y la cosa se improvisa sobre la marcha. Gratis, en un sótano con solera y con la posibilidad de pillar a alguien antes de que sea famoso."},
-    {"n": "Nosferatu: «¿Qué ocurrió entre mi padre y tu madre?»", "m": "19:00 · Tabakalera · 4,50 €", "d": "Billy Wilder en modo comedia romántica italiana, dentro del ciclo Nosferatu en pantalla grande. Por 4,50 € no hay mejor plan de sofá fuera del sofá."},
-    {"n": "Visita guiada: Mauricio Antón", "m": "18:00 · Museo San Telmo · Reserva", "d": "Recorrido por la muestra del paleoartista que lleva décadas devolviendo la piel y el músculo a tigres de dientes de sable y otros bichos extintos. Arte y ciencia de la mano, con alguien que te cuenta lo que no pone en las cartelas."}
-  ],
-  "manana": [
-    {"n": "Euskadiko Orkestra: Falla / Debussy / Stravinsky", "m": "19:30 · Kursaal · 10 / 41 €", "d": "Programa de colores fuertes: el sur de Falla, la bruma de Debussy y la sacudida de Stravinsky en la misma noche. Con entradas desde 10 €, excusa perfecta para estrenarse con la orquesta."},
-    {"n": "«Popera», de Janus Lester", "m": "20:00 · Teatro Principal · 8 €", "d": "Estreno de un film musical en el Antzoki Zaharra, un formato que no se ve todos los días en cartelera. Plan curioso de jueves por el precio de una caña y media."},
-    {"n": "Documental: «Gaza: Doctors Under Attack»", "m": "18:30 · Casares-Tomasene · Gratis", "d": "Proyección gratuita en Altza de un documental sobre los sanitarios en la Franja. No es un plan ligero, pero sí de los que te dejan pensando el resto de la semana."},
-    {"n": "«43º13'44''N»", "m": "19:30 · Kutxa Fundazioa Kluba · 10 / 12 €", "d": "Teatro de sala pequeña con título de coordenadas, en el espacio de Kutxa en Tabakalera. Formato cercano y precio contenido para quien quiere algo distinto a la gran producción."}
-  ],
-  "finde": [
-    {"n": "Donostia Bertsotan: Lujanbio, Ibarzabal, Arzallus, Mendiluze", "m": "Vie 27 · 19:30 · Lugaritz · 5 €", "d": "Cartel de primera división del bertsolarismo, con Maialen Lujanbio y Amets Arzallus, ambos campeones de Euskal Herria. Por 5 € es probablemente el mejor precio/calidad del fin de semana."},
-    {"n": "Maika Makovski", "m": "Vie 27 · 20:30 · Dabadaba · 21 / 25 €", "d": "La mallorquina pasa del rock afilado a la canción de autor sin despeinarse y en directo tiene carácter de sobra. Dabadaba es la sala perfecta para verla de cerca."},
-    {"n": "Les Surprises + Véronique Gens", "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €", "d": "Una de las grandes sopranos francesas del repertorio barroco junto a un ensemble especializado en ese mismo terreno. Hay entradas desde 11 €, así que no vale la excusa de que la ópera es cara."},
-    {"n": "«Este himno llevará la palabra euforia»", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea en Egia para cerrar el domingo con algo más que la tele. El título promete y la entrada a 10 € deja margen para un pintxo después."}
-  ]
+ "hoy": [
+  {"n": "Euskadiko Orkestra: Falla, Debussy, Stravinsky", "m": "19:30 · Kursaal · 10 / 41 €", "d": "Tres colosos del siglo XX en un mismo programa: España, Francia y Rusia sonando en el Kursaal. Las entradas desde 10 € hacen que no haya excusa para quedarse en casa."},
+  {"n": "Tertulia: «Silueta» de Harkaitz Cano", "m": "19:00 · Intxaurrondo · Gratis", "d": "Harkaitz Cano es una de las voces más afiladas de la literatura vasca, y aquí se habla de su libro sin atril ni solemnidad. Gratis y en el centro cultural del barrio."},
+  {"n": "«Popera», el film musical de Janus Lester", "m": "20:00 · Teatro Principal · 8 €", "d": "Estreno de una película musical en la sala más antigua de la Parte Vieja. Un formato raro de ver, a precio de cine."},
+  {"n": "Lipe Court en Altxerri", "m": "20:00 · Altxerri Jazz Club · Gratis", "d": "Jueves de jazz en el sótano más clásico de la ciudad, sin pagar entrada. Plan perfecto para cerrar la noche con una copa en la mano."}
+ ],
+ "manana": [
+  {"n": "Donostia Bertsotan: Lujanbio, Ibarzabal, Arzallus, Mendiluze", "m": "19:30 · Lugaritz · 5 €", "d": "Un cartel de bertsolaris de primerísima fila, con Maialen Lujanbio a la cabeza, improvisando en directo. Por 5 € es el plan más vasco y más vivo del viernes."},
+  {"n": "Maika Makovski", "m": "20:30 · Dabadaba · 21 / 25 €", "d": "La mallorquina se mueve con soltura entre el rock y la canción de autor, y en las distancias cortas de Dabadaba gana enteros. Viernes de concierto con todas las letras."},
+  {"n": "«La ciociara», de Vittorio De Sica", "m": "19:00 · Tabakalera · 4,50 €", "d": "El clásico de De Sica que le dio el Oscar a Sophia Loren, en pantalla grande dentro del ciclo Klasikoak. Neorrealismo del bueno por menos que un pintxo y un zurito."},
+  {"n": "Begiradak: «El peso de las alas»", "m": "19:00 · Teatro Principal · Gratis (con invitación)", "d": "Teatro dentro del ciclo Begiradak en el escenario de la Parte Vieja, sin pagar nada. Recoge la invitación a tiempo, que estas suelen volar."}
+ ],
+ "finde": [
+  {"n": "Ciclo Bibra: Brava + Siwanaba", "m": "Vie 27 · 20:00 · Kutxa Fundazioa Kluba · 12 / 15 €", "d": "Doble cartel en el ciclo Bibra, que suele traer propuestas frescas al Kluba de Tabakalera. Buen arranque de finde sin desplazarse ni arruinarse."},
+  {"n": "Romería con la Banda de Txistularis", "m": "Sáb 28 · 18:00 · Plaza de la Constitución · Gratis", "d": "Txistu, tamboril y baile popular bajo los balcones numerados de la plaza. Plan de calle, gratis y para todas las edades."},
+  {"n": "Ensemble Les Surprises + Véronique Gens", "m": "Sáb 28 · 19:30 · Kursaal · 11 / 56 €", "d": "La soprano Véronique Gens, referencia del repertorio barroco francés, con un conjunto historicista joven y brillante. Noche de las que se recuerdan en el auditorio."},
+  {"n": "«Este himno llevará la palabra euforia»", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea con título de manifiesto para despedir el finde en Egia. Por 10 € es una buena forma de alargar el domingo."}
+ ]
 }
