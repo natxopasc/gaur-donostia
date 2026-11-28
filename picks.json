@@ -1,20 +1,20 @@
 {
- "hoy": [
-  {"n": "Maika Makovski", "m": "20:30 · Dabadaba · 21 / 25 €", "d": "La mallorquina es de las artistas más inquietas del pop-rock de aquí, capaz de pasar del arrebato eléctrico a la canción desnuda en dos temas. En una sala del tamaño de Dabadaba se la tiene a un palmo."},
-  {"n": "Donostia Bertsotan: Lujanbio, Ibarzabal, Arzallus, Mendiluze", "m": "19:30 · Lugaritz · 5 €", "d": "Maialen Lujanbio, campeona de Euskal Herria, comparte escenario con Nerea Ibarzabal, Amets Arzallus y Aitor Mendiluze: un cartel de primera división del bertso. Por 5 €, la improvisación en directo más barata y afilada de la noche."},
-  {"n": "«La ciociara (Dos mujeres)»", "m": "19:00 · Tabakalera · 4,50 €", "d": "El ciclo Klasikoak rescata el drama de Vittorio De Sica que le valió a Sophia Loren el Óscar a la mejor actriz. Neorrealismo de pantalla grande por menos de lo que cuesta un pintxo y un vino."},
-  {"n": "Babel-17. Euskararen hiperstizio fabrika", "m": "18:00 · Museo San Telmo · Gratis", "d": "Una propuesta que cruza euskera, ficción especulativa y pensamiento, en el Museo San Telmo. Gratis y a primera hora: buen aperitivo antes de lanzarse al resto de la noche."}
- ],
- "manana": [
-  {"n": "Les Surprises + Véronique Gens", "m": "19:30 · Kursaal · 11 / 56 €", "d": "Véronique Gens es una de las grandes sopranos francesas del repertorio barroco, y llega con el conjunto Les Surprises a la sala grande del Kursaal. Una cita de altura con entradas desde 11 €."},
-  {"n": "«Muerta de amor»", "m": "19:30 · Teatro Victoria Eugenia · 24 / 29 €", "d": "Danza en el Victoria Eugenia con un título que promete drama a lo grande. Sábado noche de butaca roja y cuerpo en escena, para quien quiera algo distinto a otro concierto."},
-  {"n": "Romería con la Banda de Txistularis", "m": "18:00 · Plaza de la Constitución · Gratis", "d": "La Banda Municipal de Txistularis monta romería en la plaza más donostiarra de todas. Gratis, al aire libre y con permiso para arrancarse a bailar antes de los pintxos."},
-  {"n": "Lie Detectors + Garbayo", "m": "20:30 · Dabadaba · 15 / 18 €", "d": "Doble cartel de directo en Dabadaba, la sala de referencia para descubrir bandas de cerca. Plan nocturno de sábado sin tener que salir de Egia."}
- ],
- "finde": [
-  {"n": "Ciclo Bibra: Brava + Siwanaba", "m": "Vie 27 · 20:00 · Kutxa Fundazioa Kluba · 12 / 15 €", "d": "El ciclo Bibra junta dos propuestas en directo en el Kluba de Tabakalera, un formato pensado para descubrir música nueva. Entrada asequible para estrenar el finde."},
-  {"n": "Telleri + Sutargi (coros)", "m": "Sáb 28 · 19:30 · Basílica de la Magdalena (Errenteria) · Gratis", "d": "Dos coros bajo las bóvedas de la Magdalena de Errenteria, donde la acústica hace la mitad del trabajo. Gratis y a tiro de bus desde Donostia."},
-  {"n": "«Timbuktu»", "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · Gratis (con invitación)", "d": "El ciclo Papillon proyecta la película de Abderrahmane Sissako, nominada al Óscar, sobre la vida bajo el yihadismo en Malí. Cine con mayúsculas y gratis: excusa perfecta para el paseo de domingo por Hondarribia."},
-  {"n": "«Este himno llevará la palabra euforia»", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea en Gazteszena, la sala de Egia que suele apostar por lo fresco. Por 10 €, un cierre de domingo con más energía de la que promete el título."}
- ]
+  "hoy": [
+    {"n": "Véronique Gens + Les Surprises", "m": "19:30 · Kursaal · 11 / 56 €", "d": "Una de las grandes sopranos francesas de repertorio barroco, con un ensemble de instrumentos de época detrás. Si te queda una entrada de las baratas, es la mejor relación calidad-precio de la noche."},
+    {"n": "Muerta de amor", "m": "19:30 · Teatro Victoria Eugenia · 24 / 29 €", "d": "Danza en el escenario grande de la ciudad, para quien quiera un sábado sin guitarras. El título ya promete drama del bueno."},
+    {"n": "Romería con los txistularis", "m": "18:00 · Plaza de la Constitución · Gratis", "d": "La Banda Municipal de Txistularis monta romería en la Plaza de la Constitución, y no hace falta saber bailar para unirse. Plan gratis, de calle y muy de aquí antes de cenar por la Parte Vieja."},
+    {"n": "Lie Detectors + Garbayo", "m": "20:30 · Dabadaba · 15 / 18 €", "d": "Doble cartel en Dabadaba, la sala que suele acertar con lo que programa. Sala pequeña, sonido cercano y el resto de la noche por Egia."}
+  ],
+  "manana": [
+    {"n": "Este himno llevará la palabra euforia", "m": "Dom 29 · 19:30 · Gazteszena · 10 €", "d": "Danza contemporánea a 10 euros en Gazteszena, en Egia. Un título así pide que salgas con más energía de la que tenías al entrar."},
+    {"n": "Timbuktu en Hondarribia", "m": "Dom 29 · 18:30 · Polborina (Hondarribia) · Gratis (con invitación)", "d": "La película de Abderrahmane Sissako sobre la ocupación yihadista de Tombuctú, una de las grandes del cine africano reciente. Gratis con invitación, así que conviene reservar."},
+    {"n": "Peppermint Sextet Kolektif", "m": "Dom 29 · 12:30 · Bazkun Zahar Elkartea (Oiartzun) · Gratis", "d": "Concierto de domingo al mediodía en una sociedad de Oiartzun, gratis. Música en directo antes de comer, que es la mejor hora para escucharla."},
+    {"n": "Beavers en Altxerri", "m": "Dom 29 · 20:00 · Altxerri Jazz Club · 5 €", "d": "Cierre de finde en el club de jazz de siempre por el precio de una caña. Sin pretensiones: sótano, directo y a casa a una hora decente."}
+  ],
+  "finde": [
+    {"n": "La reina Margot", "m": "Vie 4 · 19:00 · Tabakalera · 4,50 €", "d": "El clásico de Patrice Chéreau con Isabelle Adjani, en pantalla grande dentro del ciclo Klasikoak. Intrigas, sangre y vestuario por 4,50 euros."},
+    {"n": "Maite Larburu + Violeta Veinte", "m": "Sáb 5 · 21:00 · CBA (Irun) · 10,25 €", "d": "Doble cartel en el CBA de Irun por diez euros. Un sábado sin colas de Kursaal y con escapada corta en tren."},
+    {"n": "WE, nosotros y los tiempos", "m": "Sáb 5 · 19:30 · Teatro Victoria Eugenia · 24 / 29 €", "d": "La danza sigue fuerte en el Victoria Eugenia también este finde. Buena excusa para vestirse un poco y cenar después por el Centro."},
+    {"n": "Alvaro Gaviria & Paul San Martin", "m": "Dom 6 · 20:00 · Altxerri Jazz Club · 5 €", "d": "Jazz de domingo en Altxerri, el plan barato que nunca falla. Cinco euros por dos horas de directo para cerrar la semana."}
+  ]
 }
